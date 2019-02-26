@@ -81,6 +81,14 @@
     position: relative;
 }
 
+.row3-changereq-info{
+    position: absolute;
+    top: -19%;
+    left: -3%;
+    display: inline-block;
+    position: relative;
+}
+
 .changereq-input{
     width:44.3%;
     height: 100%;
@@ -234,5 +242,5 @@
 }
 
 .btn-changereq-submit-3{
-    margin-top: 30% !important;    
+    margin-top: 3% !important;    
 }

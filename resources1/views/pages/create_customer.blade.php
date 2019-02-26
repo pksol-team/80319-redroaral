@@ -1,20 +1,30 @@
 @extends('main')
 
-@section('title', 'New Lead Generator')
+@section('title', '')
 @section('content')	
 	<div id="dashboard-form" class="usa">
 		<div id="changerequest-form" class="usa" style="">
 	        <div class="frame2-changereq" id="frame2-changereq">
 	            <div class="changereq-title">
-	                <label>Add New Lead Generator</label>
+	            	@if($check_customer == 3)
+	            		@php
+	            			$label = "Business";
+	            			$customer = "Business";
+	            		@endphp
+	            	@else
+	            		@php
+	            			$label = "First";	            		
+	            			$customer = "Normal"
+	            		@endphp
+	            	@endif
+	                <label>Add New {{ $customer }} User</label>
 	            </div>
-
-				{{-- <form id="contact-form" class="form-horizontal" method="POST" action="/add_lead_generator"> --}}
+			
 					 <form method="POST" action="{{ route('register') }}">
 	              	{{ csrf_field() }}
 		            <div class="row1-changereq-info">
 		                <div class="changereq-input">
-		                    <label>First Name</label>
+		                    <label>{{ $label }} Name</label>
 		                    <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus placeholder="Name">
 		                     @if ($errors->has('name'))
 		                         <span class="invalid-feedback" role="alert">
@@ -25,7 +35,7 @@
 		                </div>
 		                <div class="changereq-input">
 		                    <label>Last Name</label>		                    
-		                    <input type="text" name="last	_name">
+		                    <input type="text" name="last_name">
 		                </div>
 		                <div class="changereq-input">
 		                    <label>Email</label>
@@ -53,7 +63,7 @@
 		                    <label>Confirm Password</label>
 		                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required placeholder="Confirm Password">
 		                </div>
-		                <input type="hidden" name="isAdmin" value="2">
+		                <input type="hidden" name="isAdmin" value="{{ $check_customer }}">
 
 		                <button type="submit" class="btn-changereq-submit">Add Lead Generator</button>
 		            </div>
@@ -61,5 +71,18 @@
 	        </div>
 		</div>
 	</div>
+
+
+<script>
+	jQuery(document).ready(function($) {
+		var label = $(".changereq-title").find('label').html();
+
+		label = label.replace('Add','');
+
+		$(".navbar-label").find('label').html(label);
+
+		$("title").html("PPC| "+label);
+	});
+</script>
 
 @endsection()

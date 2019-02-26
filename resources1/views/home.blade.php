@@ -129,14 +129,18 @@
 	            	<table id="example" class="table table-striped table-bordered" style="width:100%">
 	            	        <thead>
 	            	            <tr>
-	            	                <th>Date</th>
-		                            <th>RequestType</th>
+	            	                <th>Date Submitted</th>
+	            	                <!--<th>Time Submitted</th>-->
+	            	                <!--<th>Name of Business</th>-->
+	            	                <!--<th>Point of Contact</th>-->
+	            	                <!--<th>Phone Number</th>-->
+	            	                <!--<th>Email</th>-->
+	            	                <!--<th>Comment</th>-->
+	            	                <!--<th>Date</th>-->
+		                            <th>Type</th>
+		                            <th>Cost Per Lead</th>
 		                            <th>Quantity</th>
-		                            <th>Cost Per Request</th>
-		                            <th>Total(excl VAT)</th>
-		                            {{-- <th>Total(inci VAT)</th> --}}
-		                            {{-- <th>Viwe Leads</th> --}}
-		                            {{-- <th>INVOICE</th> --}}
+		                            <th>Total(excluding VAT)</th>
 		                            <th>Payment Status</th>
 	            	            </tr>
 	            	        </thead>
@@ -146,14 +150,10 @@
 		            	        	<tr>                 	
 			                    	    <td>{{ $requsts->purchased_date }}</td>
 			                    	    <td>{{ $requsts->product_type }}</td>
+			                    	    <td>&#163; {{ $requsts->price }}</td>
 			                    	    <td>{{ $requsts->quantity }}</td>
-			                    	    <td>{{ $requsts->price }}</td>
 			                    	    <td>&#163; {{ $requsts->exclude_vat }}</td>
-			                    	    {{-- <td>&#163; {{ $requsts->include_vat }}</td> --}}
-			                    	    {{-- <td><button type="" class="view_btn">View</button></td> --}}
-		                            	{{-- <td><button type="" class="view_btn">Download</button></td> --}}
 			                    	    <td>{{ $requsts->payment_status }}</td>
-			                    	   {{--  <td><i class="fa fa-pencil edit_icon" aria-hidden="true"></i></td>	 --}}
 			                    	</tr>
 	                    		@endforeach					            	  
 	            	        </tbody>

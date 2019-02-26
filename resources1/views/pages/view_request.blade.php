@@ -4,21 +4,22 @@
 
 @section('content')	
 
-	<div id="ip-form" class="usa" style="">		
-	        <div class="frame3-ip">
+	<div id="ip-form" class="usa" style="">	
+	<a href="{{ url()->previous() }}"><i class="fa fa-arrow-left previous_url"></i></a>
+	        <div class="frame4-ip">
 	        	<h3 style="margin-left: 2%;">Lead Request</h3>
 	        	{{-- @php
 	        		@dump($data)
 	        	@endphp --}}
     			<form id="contact-form" class="form-horizontal">
-    	            <div class="row1-changereq-info">
+    	            <div class="row3-changereq-info">
     	            	<div class="changereq-input">
     	            	    <label>Order id</label>
     	            	    <input type="text" readOnly="" value="{{ $data->order_id }}" >							
     	            	</div>
     	                <div class="changereq-input">
     	                    <label>Order #</label>							
-    	            	    <input type="text" readOnly="" value="{{ $data->products->product_type }}" >				
+    	            	    <input type="text" readOnly="" value="{{ $data->order_no }}" >				
     	                </div>
     	                <div class="changereq-input">
     	                    <label>Customer Name</label>						
@@ -48,32 +49,25 @@
     	                    <label>Total</label>							
     	            	    <input type="text" readOnly="" value="{{ $data->include_vat }}" >				
     	                </div>
+    	                 <div class="changereq-input">
+    	                    <label>Exclude VAT</label>							
+    	            	    <input type="text" readOnly="" value="{{ $data->exclude_vat }}" >				
+    	                </div>
+    	                <div class="changereq-input">
+    	                    <label>Status</label>						
+    	            	    <input type="text" readOnly="" value="{{ $data->status }}" >				
+    	                </div>
     	                <div class="changereq-input">
     	                    <label>Payment Status</label>						
     	            	    <input type="text" readOnly="" value="{{ $data->payment_status }}" >				
     	                </div>
+    	                 <div class="changereq-textarea">
+		                    <label>Comment</label>
+		                    <textarea readOnly="">{{ $data->comment }}</textarea>
+		                </div>  
     	            </div>
     	        </form>       
 	        </div>
 	</div>
 
-
-
-{{-- <script>
-        
-    jQuery(document).ready(function($) {
-        $.ajax({
-            url: '/check_date',
-            type: 'POST',           
-            data: {
-                'Auth' : 'true'
-            },
-        })
-        .done(function(response) {
-            console.log(response);
-        });
-        
-    });                 
-
-</script> --}}
 	  @endsection()

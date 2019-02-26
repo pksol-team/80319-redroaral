@@ -12,14 +12,12 @@
 	              	{{ csrf_field() }}
 		            <div class="row1-changereq-info">
 		            	<div class="changereq-input">
-		            	    <label>Start Date</label>
-		            	    <input type="text" class="datepicker-starttime" name="purchased_date" value=""/>
-		            	    <!--<input type="text" name="purchased_date" value="{{ date('Y-m-d') }}" >							-->
+		            	    <label>Date Placed</label>
+		            	    <input type="text" name="purchased_date" value="{{ date('Y-m-d') }}" >							
 		            	</div>
 		                <div class="changereq-input">
 		                    <label>Request Type</label>								
 		                    <select name="product_type">
-		                        <option value="">Select Request Type</option>
 		                    	 <option value="Lead">Lead</option>
 		                    	 {{-- <option value="Sales">Sales</option> --}}
 		                    </select>
@@ -27,7 +25,7 @@
 		                <div class="changereq-input">
 		                    <label>Package</label>								
 		                    <select name="product_name">
-                                <option value="">Select Package</option>
+		                    	 <option value="">Select Package</option>
 		                    	 <option value="Bronze">Bronze</option>
 		                    	 <option value="Silver">Silver</option>
 		                    	 <option value="Gold">Gold</option>
@@ -43,9 +41,10 @@
 			                    <input type="text" name="item_cost" value="" readonly="">
 			                </div>
 			                <div class="changereq-input">
-			                    <label>Total(excluding VAT)</label>
+			                    <label>Total(Exclude VAT)</label>
 			                    <input type="text" name="exclude_vat" value="" readonly="">
 			                </div>
+			               
 		                {{-- @endif --}}
 		                <div class="changereq-textarea">
 		                    <label>Comment</label>
@@ -57,9 +56,6 @@
 
 			            <input type="hidden" name="include_vat" value="">
 
-			            
-			            
-			            <!--<input type="hidden" name="order_no" value="{{ rand() }}">-->
 
 		                <button type="submit" class="btn-changereq-submit">Submit</button>
 		            </div>

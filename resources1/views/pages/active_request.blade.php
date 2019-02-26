@@ -32,7 +32,7 @@
 			            	    <td>{{ $active_requsts->products->product_type }}</td>
 			            	    <td>{{ $active_requsts->products->product_name }}</td>
 			            	    <td>{{ $active_requsts->quantity }}</td>
-			            	    <td>{{ $active_requsts->products->price }}</td>
+			            	    <td>&#163; {{ $active_requsts->products->price }}</td>
 			            	    <td>&#163; {{ $active_requsts->exclude_vat }}</td>
 			            	    
 			            	    	<td style="text-align: center"><a href="/edit_request/{{ $active_requsts->order_id }}">

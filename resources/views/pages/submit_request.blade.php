@@ -17,102 +17,132 @@
 	            	@if ($value)
 			            	<div class="changereq-input">
 			            	    <label>Order #</label>							
-			            	    <input type="text" value="{{ $data->order_no }}" disabled="">
+			            	    <input type="text" name="order_id" value="{{ $data->order_id }}">
 			            	</div>
+			            	<div class="changereq-input">
+			            	    <label>Date Placed</label>
+			            	    <input type="date" name="purchased_date" value="{{ $data->purchased_date }}" disabled="">			
+			            	</div>
+			            	{{-- <div class="changereq-input">
+			            	    <label>Customer</label>			            	    
+			            	    <input type="text" name="customer" value="{{ $data->isAdmin }}" disabled="">
+			            	</div> --}}
 			                <div class="changereq-input">
 			            	    <label>Customer Name</label>
-			            	    <input type="text" value="{{ $data->name }}" disabled="">
+			            	    <input type="text" name="customer_name" value="{{ $data->name }}" disabled="">
 			            	</div>
-			            	 <div class="changereq-input">
+			                <div class="changereq-input">
+			                    <label>Level</label>	
+			            	    <input type="text" name="product_name" value="{{ $data->product_name }}" disabled="">	
+			                </div>
+			                <div class="changereq-input">
 			                    <label>Request Type</label>		
-			            	    <input type="text" value="{{ $data->product_type }}" disabled="">	
+			            	    <input type="text" name="product_type" value="{{ $data->product_type }}" disabled="">	
 			                </div>
 			                <div class="changereq-input">
-			                    <label>Pakcage</label>	
-			            	    <input type="text" value="{{ $data->product_name }}" disabled="">	
-			                </div>
-			               <div class="changereq-input">
-			            	    <label>Business Name</label>
-			            	    <input type="text" name="business_name_lead" value="">
-			            	</div>
-			                <div class="changereq-input">
-			                    <label>Point of Contact </label>
-			                    <input type="text" name="contact_lead" value="" >
-			                </div>
-			                <div class="changereq-input">
-			                    <label>Phone no</label>
-			                    <input type="text" name="phone_no_lead" value="" >
+			                    <label>Contact No.</label>
+			                    <input type="text" name="phone" value="{{ $data->phone }}" disabled="">
 			                </div>
 			                <div class="changereq-input">
 			                    <label>Email Address</label>
-			                    <input type="text" name="email_lead" value="">
-			                </div>
-			                <div class="changereq-input">
-			                    <input type="hidden" name="order_id" value="{{ $data->order_id}}">
-			                </div>
-			                <div class="changereq-input">
-			                    <input type="hidden" name="lead_id" value="{{ Auth::user()->user_id}}">
+			                    <input type="text" name="email" value="{{ $data->email }}" disabled="">
 			                </div>
 
 			                <br>
 
-			                <div class="changereq-textarea">
+			                <div class="changereq-input">
 			                    <label>Comment</label>
-			                    <textarea disabled="">{{ $data->comment }}
+			                    <textarea name="">{{ $data->comment }}
 			                    </textarea>
 			                </div>
+			            	
+			                {{-- <div class="changereq-input">
+			                    <label>Quantity</label>
+			                    <input type="text" name="quantity" value="{{ $data->quantity }}" disabled="">
+			                </div>
+		                  <div class="changereq-input">
+			                    <label>Cost Per Rquest</label>
+			                    <input type="text" name="item_cost" value=""  required="">
+			                </div>
+			                <div class="changereq-input">
+			                    <label>Total(Exclude VAT)</label>
+			                    <input type="text" name="exclude_vat" value="" required="">
+			                </div>
+			                <div class="changereq-input">
+			                    <label>Total(Include VAT)</label>
+			                    <input type="text" name="include_vat" value="" required="">
+			                </div>  --}}
 					@else
+
+			         {{--        <button type="submit" class="btn-changereq-submit">Submit</button>
+			            </div>
+			        </form>
+					<form id="contact-form" class="form-horizontal" method="POST" action="/update_order_lead">
+		              	{{ csrf_field() }}	              	
+			            <div class="row1-changereq-info"> --}}
 			            	<div class="changereq-input">
-			            	    <label>Select Order</label>							
+			            	    <label>Select Order #</label>							
 			            	    <select name="order_id">
-				            	    <option value="">Selec Order</option>
+				            	    <option value="">Selec Order #</option>
 
 			            	    	@foreach ($data as $id)
-				            	    	<option value="{{ $id->order_no }}">{{ $id->order_no }}</option>
+				            	    	<option value="{{ $id->order_id }}">{{ $id->order_id }}</option>
 			            	    	@endforeach
 			            	    </select>
 			            	</div>
 			            	<div class="changereq-input">
-			            	    <label>Customer Name</label>
-			            	    <input type="text" value="" disabled="" data-customer_name="customer_name">
+			            	    <label>Date Placed</label>
+			            	    <input type="date" name="purchased_date" value="" disabled="">			
 			            	</div>
+			            	{{-- <div class="changereq-input">
+			            	    <label>Customer</label>
+			            	    <input type="text" name="customer" value="" disabled="">
+			            	</div> --}}
 			            	<div class="changereq-input">
+			            	    <label>Customer Name</label>
+			            	    <input type="text" name="customer_name" value="" disabled="">
+			            	</div>
+			                <div class="changereq-input">
+			                    <label>Level</label>	
+			            	    <input type="text" name="product_name" value="" disabled="">	
+			                </div>
+			                <div class="changereq-input">
 			                    <label>Request Type</label>		
-			            	    <input type="text" value="" disabled="" data-product_type="product_type">
+			            	    <input type="text" name="product_type" value="" disabled="">
 			                </div>
 			                 <div class="changereq-input">
-			                    <label>Package</label>	
-			            	    <input type="text" value="" disabled="" data-product_name="product_name">	
-			                </div>
-			            	<div class="changereq-input">
-			            	    <label>Business Name</label>
-			            	    <input type="text" name="business_name_lead" value="">
-			            	</div>
-			                <div class="changereq-input">
-			                    <label>Point of Contact </label>
-			                    <input type="text" name="contact_lead" value="" >
-			                </div>
-			                <div class="changereq-input">
-			                    <label>Phone no</label>
-			                    <input type="text" name="phone_no_lead" value="" >
+			                    <label>Contact No.</label>
+			                    <input type="text" name="phone" value="" disabled="">
 			                </div>
 			                <div class="changereq-input">
 			                    <label>Email Address</label>
-			                    <input type="text" name="email_lead" value="">
+			                    <input type="text" name="email" value="" disabled="">
 			                </div>
-                             <div class="changereq-input">
-			                    <input type="hidden" name="order_id" value="">
-			                </div>
-			                <div class="changereq-input">
-			                    <input type="hidden" name="lead_id" value="{{ Auth::user()->user_id}}">
-			                </div>
+
 			                <br>
 
-			                <div class="changereq-textarea">
+			                <div class="changereq-input">
 			                    <label>Comment</label>
-			                    <textarea disabled="">
+			                    <textarea name="">
 			                    </textarea>
+			                    {{-- <input type="text" name="comment" value="" disabled=""> --}}
 			                </div>
+			                {{-- <div class="changereq-input">
+			                    <label>Quantity</label>
+			                    <input type="text" name="quantity" value="" disabled="">
+			                </div>
+		                  	<div class="changereq-input">
+			                    <label>Cost Per Rquest</label>
+			                    <input type="text" name="item_cost" value=""  required="">
+			                </div>
+			                <div class="changereq-input">
+			                    <label>Total(Exclude VAT)</label>
+			                    <input type="text" name="exclude_vat" value="" required="">
+			                </div>
+			                <div class="changereq-input">
+			                    <label>Total(Include VAT)</label>
+			                    <input type="text" name="include_vat" value="" required="">
+			                </div>  --}}
 				
 	            @endif
 
@@ -123,14 +153,18 @@
 		</div>
 	</div>
 
+
+	<!-- Button trigger modal -->
+
+
 	<script>
 		jQuery(document).ready(function($) {	
 
 			$('select[name="order_id"]').change(function(){
 
-				// $("input[name='item_cost']").val("");
-				// $("input[name='exclude_vat']").val("");
-				// $("input[name='include_vat']").val("");
+				$("input[name='item_cost']").val("");
+				$("input[name='exclude_vat']").val("");
+				$("input[name='include_vat']").val("");
 				var _id = $('select[name="order_id"]').val();
 				$.ajax({
 					url: '/get_order_data',
@@ -150,36 +184,39 @@
 					}else{
 						var customer_type = 'Normal';					
 					}
-					$('input[data-customer_name="customer_name"]').attr('value', response_data.name);
-					$('input[data-product_type="product_type"]').attr('value', response_data.product_type);
-					$('input[data-product_name="product_name"]').attr('value', response_data.product_name);
-					$('input[name="order_id"]').attr('value', response_data.order_id);
+					// $('input[name="customer"]').attr('value', customer_type);
+					$('input[name="customer_name"]').attr('value', response_data.name);
+					$('input[name="product_type"]').attr('value', response_data.product_type);
+					$('input[name="product_name"]').attr('value', response_data.product_name);
+					$('input[name="phone"]').attr('value', response_data.phone);
+					$('input[name="email"]').attr('value', response_data.email);
 					$('textarea').val(response_data.comment);
+					// $('input[name="quantity"]').attr('value', response_data.quantity);
 				});					
 				
 			});
 
-// 			$("input[name='item_cost']").keyup(function() {
+			$("input[name='item_cost']").keyup(function() {
 				
-// 				var cost = $(this).val();
+				var cost = $(this).val();
 
-// 				var quantity = $("input[name='quantity']").val();
+				var quantity = $("input[name='quantity']").val();
 				
-// 				var vat = 10;
+				var vat = 10;
 
-// 				console.log(cost);
-// 				console.log(quantity);
-// 				console.log(vat);
+				console.log(cost);
+				console.log(quantity);
+				console.log(vat);
 
-// 				var exclude_vat = quantity * cost ;
+				var exclude_vat = quantity * cost ;
 
-// 				$("input[name='exclude_vat']").val(exclude_vat);
+				$("input[name='exclude_vat']").val(exclude_vat);
 
-// 				var include_vat = parseInt(vat) + parseInt(exclude_vat);
+				var include_vat = parseInt(vat) + parseInt(exclude_vat);
 
-// 				$("input[name='include_vat']").val(include_vat);
+				$("input[name='include_vat']").val(include_vat);
 				
-// 			});
+			});
 		});
 	</script>
 

@@ -7,7 +7,7 @@
       @if(Auth::user()->isAdmin == 1)
         <div class="sidebar-cont" id="show-dashboard">
             <a href="/">
-              <img src="/resources/icons/dash-orange.png" class="dashicon">
+              <img src="/resources/icons/dash-gray.png" class="dashicon">
               <label class="{{ Request::is('/') ? 'active' : '' }}" id="sidebar-lbl-dashboard">DASHBOARD</label>
             </a>
         </div>
@@ -72,6 +72,12 @@
             <label class="{{ Request::is('configuration') ? 'active' : '' }}" id="sidebar-lbl-pm">Configuration</label>
           </a>
         </div>
+         <div class="sidebar-cont" id="show-pm">
+            <a href="https://pay.gocardless.com/AL0001SY0GM4NA" target="_blank">
+              <img src="/resources/icons/inventory-gray.png" class="pmicon">
+              <label id="sidebar-lbl-pm">Setup Direct Debit</label>
+            </a>
+          </div> 
        
       @elseif(Auth::user()->isAdmin == 2)
           <div class="sidebar-cont" id="show-server">
@@ -102,7 +108,7 @@
           @else
             <div class="sidebar-cont" id="show-dashboard">
                 <a href="/">
-                  <img src="/resources/icons/dash-orange.png" class="dashicon">
+                  <img src="/resources/icons/dash-gray.png" class="dashicon">
                   <label class="{{ Request::is('/') ? 'active' : '' }}" id="sidebar-lbl-dashboard">Dashboard</label>
                 </a>
             </div>
@@ -120,8 +126,11 @@
             </div>
             <div class="sidebar-cont" id="show-server">
               <a href="/business_list/pending">
+                  @php
+                  $url = url()->current();
+                  @endphp
                 <img src="/resources/icons/purchase-gray.png" class="servericon">
-                <label class="{{ Request::is('/business_list/pending') ? 'active' : '' }}" id="sidebar-lbl-server">ACTIVE REQUESTS</label>
+                <label class="{{ strpos($url, 'pending') ? 'active' : '' }}" id="sidebar-lbl-server">ACTIVE REQUESTS</label>
               </a>
             </div>
             <div class="sidebar-cont" id="show-server">
@@ -130,6 +139,12 @@
                 <label class="{{ Request::is('business_list/completed') ? 'active' : '' }}" id="sidebar-lbl-server">Completed Requests</label>
               </a>
             </div>
+             <div class="sidebar-cont" id="show-pm">
+            <a href="https://pay.gocardless.com/AL0001SY0GM4NA" target="_blank">
+              <img src="/resources/icons/inventory-gray.png" class="pmicon">
+              <label id="sidebar-lbl-pm">Setup Direct Debit</label>
+            </a>
+          </div> 
             {{-- <div class="sidebar-cont" id="show-server">
               <a href="#">
                 <img src="/resources/icons/pm-gray.png" class="servericon">
@@ -151,12 +166,7 @@
            
             
           @endif  
-           <div class="sidebar-cont" id="show-pm">
-            <a href="https://pay.gocardless.com/AL0001SY0GM4NA" target="_blank">
-              <img src="/resources/icons/inventory-gray.png" class="pmicon">
-              <label id="sidebar-lbl-pm">Setup Direct Debit</label>
-            </a>
-          </div> 
+          
           
     </div> 
 </div>

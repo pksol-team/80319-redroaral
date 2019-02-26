@@ -49,16 +49,18 @@ Route::post('/update_order_lead', 'MainController@orderlead_update');
 
 Route::get('/configuration', 'MainController@configuration_index');
 Route::post('/update_product', 'MainController@product_update');
+Route::get('/view_request/{order_id}', 'MainController@viewrequest_show');
+
+
 
 Route::get('/customer_all_leads/{request}/{id}', 'MainController@customerallleads_index');
 Route::get('/lead_all_request/{request}/{id}', 'MainController@leadallrequest_index');
+
 Route::get('/submitted_leads', 'MainController@submittedleads_index');
-Route::get('/view_request/{order_id}', 'MainController@viewrequest_show');
+
 Route::get('/edit_user/{user_id}', 'MainController@edituser');
 
-
-Route::post('/check_date', 'MainController@check_date');
-
+Route::post('/update_user_info', 'MainController@updateuser');
 
 
 

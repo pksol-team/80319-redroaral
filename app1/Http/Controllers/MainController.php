@@ -53,20 +53,19 @@ class MainController extends Controller
             return redirect("/page_404");
         }
     }
-                
-                    public function businesslist_index($request){
+     public function businesslist_index($request){
 
 
         if(Auth::user()->isAdmin == 2){
             if($request == 'pending'){
             $order = Order::with('products')->with('users')->where('lead_id', Auth::user()->user_id)->where('status', 'Pending')->orderBy('order_id','DESC')->get();
             $orders = json_decode($order);
-            return view('pages/business_list', ['request_data' => $orders, 'data' => 'Pending Request']);
+            return view('pages/business_list', ['request_data' => $orders, 'data' => 'Pending Request', 'user' => '']);
         }else{
             $order = Order::with('products')->with('users')->where('status', 'Completed')->where('lead_id', Auth::user()->user_id)->orderBy('order_id','DESC')->get();
             $orders = json_decode($order);
             
-            return view('pages/business_list', ['request_data' => $orders, 'data' => 'Completed Request']);
+            return view('pages/business_list', ['request_data' => $orders, 'data' => 'Completed Request', 'user' => '']);
         }
         }
         else{
@@ -75,32 +74,32 @@ class MainController extends Controller
                 $order = Order::with('products')->with('users')->where('status', 'Pending')->where('customer_id', Auth::user()->user_id)->orderBy('order_id','DESC')->get();
                 $orders = json_decode($order);
                 
-                return view('pages/business_list', ['request_data' => $orders, 'data' => 'Pending Request']);
+                return view('pages/business_list', ['request_data' => $orders, 'data' => 'Pending Request', 'user' => '']);
             }else{
                 $order = Order::with('products')->with('users')->where('status', 'Completed')->where('customer_id', Auth::user()->user_id)->orderBy('order_id','DESC')->get();
                 $orders = json_decode($order);
                 
-                return view('pages/business_list', ['request_data' => $orders, 'data' => 'Completed Request']);
+                return view('pages/business_list', ['request_data' => $orders, 'data' => 'Completed Request', 'user' => '']);
             }
         }
 
 
 
-        // if($request == 'pending'){
+     	// if($request == 'pending'){
       //       $requests = DB::table('customer_order')->where('status', 'Pending')->orderBy('id','DESC')->get();           
       //       return view('pages/business_list', ['request_data' => $requests,
       //           'data' => 'Pending Request']);
 
-        // }else {
+     	// }else {
       //       $requests = DB::table('customer_order')->where('status', 'Completed')->orderBy('id','DESC')->get();      
-            // return view('pages/business_list', ['request_data' => $requests,
+    		// return view('pages/business_list', ['request_data' => $requests,
       //           'data' => 'Completed Request']);
-        // }
+     	// }
     }
     public function activerequest_index(){
         if (Auth::user()->isAdmin == 1) {
             
-            $active_request = Order::with('products')->where('lead_id', '<>', 0)->where('status', 'Pending')->orWhere('payment_status', 'Awaiting Payment')->with('users')->orderBy('order_id','DESC')->get();
+            $active_request = Order::with('products')->where('lead_id', '<>', 0)->where('status', 'Pending')->where('payment_status', 'Awaiting Payment')->with('users')->orderBy('order_id','DESC')->get();
 
             // $active_request = Order::with('products')->with('users')->where('payment_status', 'Awaiting Payment')->where(function ($query) {
             //     $query->where('status', '=', 'Pending')
@@ -128,15 +127,14 @@ class MainController extends Controller
             return redirect("/page_404");
         }
     }
-    // public function genaccounts_index(){
-    //     if(Auth::user()->isAdmin == 1){
-
-    // 	   return view('pages/gen_accounts');
-    //     }else{
-    //         return redirect("/page_404");
-    //     }
-    // }
-    public function genusers_index($request){
+    public function genaccounts_index(){
+        if(Auth::user()->isAdmin == 1){
+    	   return view('pages/gen_accounts');
+        }else{
+            return redirect("/page_404");
+        }
+    }
+   public function genusers_index($request){
         if(Auth::user()->isAdmin == 1){
             $lead_gen_users = DB::table('users')->where('isAdmin', 2)->orderBy('user_id','DESC')->get();
             if($request == 'users'){
@@ -199,9 +197,6 @@ class MainController extends Controller
         //     $exclude_vat = $request->exclude_vat;
         //     $include_vat = $request->include_vat;
         // }
-
-
-
         DB::table('customer_order')->insert([
             'product_id' => $request->product_id, 
             'customer_id' => Auth::user()->user_id,
@@ -210,10 +205,7 @@ class MainController extends Controller
             'include_vat' => $request->include_vat,
             'purchased_date' => $request->purchased_date,
             'comment' => $request->comment,
-            'auto_add_row' => $request->auto_add_row,
-            'current_date_' => date('Y-m-d'),
-            'form_status' => 'Active'
-
+            'order_no' => rand()
         ]);
 
 
@@ -264,23 +256,42 @@ class MainController extends Controller
 
     public function editrequest_edit($request){  
     $get_data = Order::with('products')->with('users')->where('order_id', $request)->first();
+    $get_vat =  DB::table('product_vat')->where('id', 1)->first();
 
       // $get_data = DB::table('customer_order')->where('order_id', $request)->first();
-      return view("pages/edit_request")->with('data', $get_data);
+      return view("pages/edit_request", ['data' => $get_data, 'vat' => $get_vat]);
     }
 
     public function updatecustomerorder_update(Request $request){        
-       // echo $request->order_id;
-       // echo $request->purchased_date;
-       // echo $request->product_id;
-       // echo $request->quantity;
-       // echo $request->item_cost;
-       // echo $request->order_id;
+        // echo $request->name;
+        // echo $request->purchased_date;
+        // echo $request->product_id;
+        // echo $request->quantity;
+        // echo $request->item_cost;
+        // echo $request->exclude_vat;
+        // echo $request->include_vat;
+        // echo $request->status;
+        // echo $request->payment_status;
+        // echo $request->order_id;
 
-       DB::table('customer_order')->where('order_id', $request->order_id)->update( [ 'status' => $request->status, 'payment_status' => $request->payment_status ]);
+    
 
-       return redirect("/activerequest");
-       // echo "Done";
+      DB::table('customer_order')->where('order_id', $request->order_id)->update( [
+          'status' => $request->status, 
+          'payment_status' => $request->payment_status, 
+          'product_id' => $request->product_id, 
+          'quantity' => $request->quantity, 
+          'exclude_vat' => $request->exclude_vat, 
+          'include_vat' => $request->include_vat, 
+          'purchased_date' => $request->purchased_date
+          ]);
+
+
+     DB::table('users')->where('user_id', $request->user_id)->update([
+          'name' => $request->name
+          ]);
+      return redirect("/activerequest");
+      
     }
 
     public function products_index(){ 
@@ -307,12 +318,13 @@ class MainController extends Controller
     // }
     
     public function submitrequest_index($request){
-
-        if($request == 0){
+        
+        if(Auth::user()->isAdmin == 2){
+            if($request == 0){
 
         $lead_gen_requests = DB::table('customer_order')
         ->join('products', 'customer_order.product_id', '=', 'products.id')
-        ->join('users', 'customer_order.customer_id', '=', 'users.user_id')->where('customer_order.status', '=', 'Pending')->where('customer_order.lead_id', '=', 0)->get();
+        ->join('users', 'customer_order.customer_id', '=', 'users.user_id')->where('customer_order.request_status', '=', 'Deactive')->get();
 
         return view('pages/submit_request', ['data' => $lead_gen_requests, 'value' => '']);
 
@@ -328,6 +340,11 @@ class MainController extends Controller
        // return view("pages/submit_request")->with('data', $selected_order);
 
         }
+        }else{
+            return redirect("/page_404");
+        }
+
+        
 
     }
 
@@ -337,7 +354,7 @@ class MainController extends Controller
         // echo $request->order_id;
         $selected_order = DB::table('customer_order')
         ->join('products', 'customer_order.product_id', '=', 'products.id')
-        ->join('users', 'customer_order.customer_id', '=', 'users.user_id')->where('customer_order.order_id', '=', $request->order_id)->first();
+        ->join('users', 'customer_order.customer_id', '=', 'users.user_id')->where('customer_order.order_no', '=', $request->order_id)->first();
         
 
         echo json_encode($selected_order);
@@ -348,12 +365,22 @@ class MainController extends Controller
 
 
      public function orderlead_update(Request $request){        
-       // echo $request->order_id;
-       // DB::table('customer_order')->where('order_id', $request->order_id)->update( [ 'exclude_vat' => $request->exclude_vat, 'include_vat' => $request->include_vat,'request_status' => 'Active', 'lead_id' => Auth::user()->user_id  ]);
-       DB::table('customer_order')->where('order_id', $request->order_id)->update( [ 'request_status' => 'Active', 'lead_id' => Auth::user()->user_id  ]);
+       
+      DB::table('customer_order')->where('order_id', $request->order_id)->update( [ 'request_status' => 'Active', 'lead_id' => Auth::user()->user_id  ]);
+    //   return redirect("/");
+       
+        DB::table('lead_gen_request')->insert([
+            'order_id' => $request->order_id, 
+            'lead_id' => $request->lead_id,
+            'business_name_lead' => $request->business_name_lead,
+            'contact_lead' => $request->contact_lead,
+            'phone_no_lead' => $request->phone_no_lead,
+            'email_lead' => $request->email_lead
+        ]);
+    
+        return redirect("/submitted_leads");
 
-       return redirect("/");
-       // echo "Done";
+       
     }
 
      public function product_update(Request $request){        
@@ -365,54 +392,65 @@ class MainController extends Controller
 
         }
     }
-
+    
     public function customerallleads_index($request, $id){
-
+        
+        $business_name = DB::table('users')->where('user_id', $id)->first()->name;
+        
         if($request == 'pending'){
             $order = Order::with('products')->with('users')->where('status', 'Pending')->where('customer_id', $id)->orderBy('order_id','DESC')->get();
             $orders = json_decode($order);
             
-            
-
-            return view('pages/business_list', ['request_data' => $orders, 'data' => 'Pending Request', 'user_id' => $id]);
+            return view('pages/business_list', ['request_data' => $orders, 'data' => $business_name.' Pending Request', 'user_id' => $id, 'name' => $business_name, 'user' => 'customer']);
         }else{
             $order = Order::with('products')->with('users')->where('status', 'Completed')->where('customer_id', $id)->orderBy('order_id','DESC')->get();
             $orders = json_decode($order);
             
-            return view('pages/business_list', ['request_data' => $orders, 'data' => 'Completed Request', 'user_id' => $id]);
+            return view('pages/business_list', ['request_data' => $orders, 'data' => $business_name.' Completed Request', 'user_id' => $id, 'name' => $business_name, 'user' => 'customer']);
         }
         
 
     }
-    public function leadallrequest_index($request, $id){
+    
+    
+     public function leadallrequest_index($request, $id){
 
+    $business_name = DB::table('users')->where('user_id', $id)->first()->name;
+    
         if($request == 'pending'){
             $order = Order::with('products')->with('users')->where('status', 'Pending')->where('lead_id', $id)->orderBy('order_id','DESC')->get();
             $orders = json_decode($order);
             
-            return view('pages/business_list', ['request_data' => $orders, 'data' => 'Pending Request', 'user_id' => $id, 'user' => 'lead']);
+            return view('pages/business_list', ['request_data' => $orders, 'data' => $business_name.' Pending Request', 'user_id' => $id, 'user' => 'lead']);
         }else{
             $order = Order::with('products')->with('users')->where('status', 'Completed')->where('lead_id', $id)->orderBy('order_id','DESC')->get();
             $orders = json_decode($order);
             
-            return view('pages/business_list', ['request_data' => $orders, 'data' => 'Completed Request', 'user_id' => $id, 'user' => 'lead']);
+            return view('pages/business_list', ['request_data' => $orders, 'data' => $business_name.' Completed Request', 'user_id' => $id, 'user' => 'lead']);
         }
         
 
     }
-
-
+    
+    
      public function submittedleads_index(){
-
-            $order = Order::with('products')->with('users')->where('lead_id', Auth::user()->user_id)->orderBy('order_id','DESC')->get();
+            
+            if(Auth::user()->isAdmin){
+                $order = Order::with('products')->with('users')->where('lead_id', Auth::user()->user_id)->orderBy('order_id','DESC')->get();
             $orders = json_decode($order);
             
-            return view('pages/all_leads')->with('data', $orders);       
+            return view('pages/all_leads')->with('data', $orders);  
+            }
+            else{
+                return redirect("/page_404");
+            }
+                 
             
 
     }
-
-      public function viewrequest_show($id){
+    
+    
+    public function viewrequest_show($id){
 
             $order = Order::with('products')->with('users')->where('order_id', $id)->first();
             $orders = json_decode($order);
@@ -421,8 +459,8 @@ class MainController extends Controller
             
 
     }
-
-    public function edituser($id){
+    
+     public function edituser($id){
 
        $user = DB::table('users')->where('user_id', $id)->first();
 
@@ -430,118 +468,35 @@ class MainController extends Controller
             
 
     }
-
-    public function check_date(Request $request){
-
-        if($request->method() == 'POST'){
-
-            if($request->Auth == 'true'){
-
-                $orders = DB::table('customer_order')->get();
-
-                foreach ($orders as $data) {
-                     $product_id = $data->product_id;
-                     $customer_id = $data->customer_id;
-                     $quantity = $data->quantity;
-                     $exclude_vat = $data->exclude_vat;
-                     $include_vat = $data->include_vat;
-                     $purchased_date = date('Y-m-d');
-                     $comment = $data->comment;
-                    if($data->form_status == 'Active'){ 
-                        if($data->auto_add_row == 'Weekly'){
-
-                             $submitted_date = date_create($data->current_date_);
-                             $current_date = date_create(date('Y-m-d'));
-
-                             $date_difference = date_diff($submitted_date ,$current_date);
-                             $difference =  $date_difference->format("%a");
-                             if($difference == 7){
-                                 DB::table('customer_order')->insert([
-                                     'product_id' => $product_id, 
-                                     'customer_id' => $customer_id,
-                                     'quantity' => $quantity,
-                                     'exclude_vat' => $exclude_vat,
-                                     'include_vat' => $include_vat,
-                                     'purchased_date' => $purchased_date,
-                                     'comment' => $comment,
-                                     'current_date_' => date('Y-m-d'),
-                                     'form_status' => 'Active',
-                                     'auto_add_row' => 'Weekly'
-                                 ]);
-                                 DB::table('customer_order')->where('order_id', $data->order_id)->update( [ 'form_status' => 'Resubmitted' ]);
-                             }
-                        }
-                        else if($data->auto_add_row == 'Every Two Weeks'){
-
-                             $submitted_date = date_create($data->current_date_);
-                             $current_date = date_create(date('Y-m-d'));
-
-                             $date_difference = date_diff($submitted_date ,$current_date);
-                             $difference =  $date_difference->format("%a");
-                             if($difference == 14){
-                                 DB::table('customer_order')->insert([
-                                     'product_id' => $product_id, 
-                                     'customer_id' => $customer_id,
-                                     'quantity' => $quantity,
-                                     'exclude_vat' => $exclude_vat,
-                                     'include_vat' => $include_vat,
-                                     'purchased_date' => $purchased_date,
-                                     'comment' => $comment,
-                                     'current_date_' => date('Y-m-d'),
-                                     'form_status' => 'Active',
-                                     'auto_add_row' => 'Every Two Weeks'
-                                 ]);
-                                 DB::table('customer_order')->where('order_id', $data->order_id)->update( [ 'form_status' => 'Resubmitted' ]);
-                             }
-                        }
-                        else  if($data->auto_add_row == 'Monthly'){
-
-                             $submitted_date = date_create($data->current_date_);
-                             $current_date = date_create(date('Y-m-d'));
-
-                             $date_difference = date_diff($submitted_date ,$current_date);
-                             $difference =  $date_difference->format("%a");
-                             if($difference == 30){
-                                 DB::table('customer_order')->insert([
-                                     'product_id' => $product_id, 
-                                     'customer_id' => $customer_id,
-                                     'quantity' => $quantity,
-                                     'exclude_vat' => $exclude_vat,
-                                     'include_vat' => $include_vat,
-                                     'purchased_date' => $purchased_date,
-                                     'comment' => $comment,
-                                     'current_date_' => date('Y-m-d'),
-                                     'form_status' => 'Active',
-                                     'auto_add_row' => 'Monthly'
-                                 ]);
-                                 DB::table('customer_order')->where('order_id', $data->order_id)->update( [ 'form_status' => 'Resubmitted' ]);
-                             }
-                        }
-                    }
-                } 
-            }
-            else{
-                return redirect('/page_404');
-            }
-        }
-        else{
-            return redirect('/page_404');                                 
-        }     
+    
+    
+      public function updateuser(Request $request){        
+       
+       if($request->name == 'just_status'){
+        DB::table('users')->where('user_id', $request->user_id)->update( ['status' => $request->status]);       
+       }else{
+        DB::table('users')->where('user_id', $request->user_id)->update( [ 'name' => $request->name, 'last_name' => $request->last_name, 'phone' => $request->phone, 'status' => $request->status]);    
+       }
+       
+       
+    if($request->isAdmin == 2){
+        return redirect("/genusers/users");
+    }else if($request->isAdmin == 3){
+        return redirect("/customers/business");
+    }else{
+        return redirect("/page_404");
+    }
         
+        // if($request->table == 'product_vat'){
+        //     
+        // }else{
+        //     DB::table('products')->where('id', $request->id)->update( [ 'product_type' => $request->type, 'product_name' => $request->name, 'price' => $request->cost]);
 
-
-             
+        // }
     }
     
-
     
 
-
-    
-    
-    
-    
-    
 
 
     
