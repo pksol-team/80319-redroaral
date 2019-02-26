@@ -1,0 +1,116 @@
+
+$(document).ready(function(){
+    $('.inv-close').hover(function()
+    {
+        $('.inv-close').attr('src','resources/icons/close-darkgray.png');
+    },
+    function()
+    {
+    $('.inv-close').attr('src','resources/icons/close-gray.png');
+    })
+});
+
+
+$(document).ready(function(){
+    $('.asset-close').hover(function()
+    {
+        $('.asset-close').attr('src','resources/icons/close-darkgray.png');
+    },
+    function()
+    {
+    $('.asset-close').attr('src','resources/icons/close-gray.png');
+    });
+});
+
+$(document).ready(function(){
+        $('.ip-close').hover(function()
+        {
+            $('.ip-close').attr('src','resources/icons/close-darkgray.png');
+        },
+        function()
+        {
+        $('.ip-close').attr('src','resources/icons/close-gray.png');
+    });
+});
+
+$(document).ready(function(){
+    $('.voicedid-close').hover(function()
+    {
+        $('.voicedid-close').attr('src','resources/icons/close-darkgray.png');
+    },
+    function()
+    {
+    $('.voicedid-close').attr('src','resources/icons/close-gray.png');
+});
+});
+
+$(document).ready(function(){
+    $('.pm-close').hover(function()
+    {
+        $('.pm-close').attr('src','resources/icons/close-darkgray.png');
+    },
+    function()
+    {
+    $('.pm-close').attr('src','resources/icons/close-gray.png');
+});
+});
+$(document).ready(function(){
+    $('.update-close').hover(function()
+    {
+        $('.update-close').attr('src','resources/icons/close-darkgray.png');
+    },
+    function()
+    {
+    $('.update-close').attr('src','resources/icons/close-gray.png');
+});
+});
+$(document).ready(function(){
+    $('.fmap-close').hover(function()
+    {
+        $('.fmap-close').attr('src','resources/icons/close-darkgray.png');
+    },
+    function()
+    {
+    $('.fmap-close').attr('src','resources/icons/close-gray.png');
+});
+});
+$(document).ready(function(){
+    $('.voice-modal-close').hover(function()
+    {
+        $('.voice-modal-close').attr('src','resources/icons/close-darkgray.png');
+    },
+    function()
+    {
+    $('.voice-modal-close').attr('src','resources/icons/close-gray.png');
+});
+});
+$(document).ready(function(){
+    $('.voice-modal-update-close').hover(function()
+    {
+        $('.voice-modal-update-close').attr('src','resources/icons/close-darkgray.png');
+    },
+    function()
+    {
+    $('.voice-modal-update-close').attr('src','resources/icons/close-gray.png');
+});
+});
+$(document).ready(function(){
+    $('.add-server-modal-close').hover(function()
+    {
+        $('.add-server-modal-close').attr('src','resources/icons/close-darkgray.png');
+    },
+    function()
+    {
+    $('.add-server-modal-close').attr('src','resources/icons/close-gray.png');
+});
+});
+$(document).ready(function(){
+    $('.update-server-modal-close').hover(function()
+    {
+        $('.update-server-modal-close').attr('src','resources/icons/close-darkgray.png');
+    },
+    function()
+    {
+    $('.update-server-modal-close').attr('src','resources/icons/close-gray.png');
+});
+});

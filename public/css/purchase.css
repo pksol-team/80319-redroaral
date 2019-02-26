@@ -1,0 +1,210 @@
+
+.frame1-purch{
+    position: relative;
+    left:30%;
+    height:45px;
+    width:43%;
+    top:20px;
+    border-radius: 4px;
+}
+.frame2-purch{
+    position: relative;
+    left:17.3%;
+    height: 640px;
+    width:67%;
+    top:5%;
+    background-color: #fff;
+    border-radius:10px;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.3);
+}
+.frame3-purch{
+    background-color: #fff;
+    height: 640px;
+    width: 95%;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.2);
+    overflow:hidden;
+    left:2.5%;
+    top:5%;
+}
+.btn-add-purch button{
+    background-color: #f26f21;
+    height:100%;
+    width:50%;
+    border-bottom-left-radius:6px;
+    border-top-left-radius:6px;
+    left:0%;
+    position: absolute;
+    display: inline-block;
+    border:0px;
+    font-family:montserrategular;
+    font-size:14px;
+    color:white;
+}
+
+.btn-view-purch button{
+    background-color: #E8E8E8;
+    height:100%;
+    width:50%;
+    border-bottom-right-radius:6px;
+    border-top-right-radius:6px;
+    left:50%;
+    position: absolute;
+    display: inline-block;
+    border:0px;
+    font-size:14px;
+    font-family:montserrategular;
+    color:#666666;
+}
+.purch-title{
+    top:3%;
+    left:2.3%;
+    position: absolute;
+    font-size:23px;
+    font-family:montserrategular;
+    color:#4A4A4A;
+}
+.purch-subtitle{
+    position: absolute;
+    font-size:12px;
+    font-family:montserrategular;
+    top:7.8%;
+    left:2.4%;
+    color:gray;
+}
+
+.row1-purch-info{
+    position: absolute;
+    top:58px;
+    left:-3%;
+    display: inline-block;
+    position: relative;
+}
+
+
+.purch-input label{
+    color:gray;
+    font-family:montserrategular;
+    font-size:12px;
+}
+
+
+.purch-textarea label{
+    color:gray;
+    font-family:montserrategular;
+    font-size:12px;
+    position: absolute;
+    margin-top:-22px;
+    margin-left:1.8%;
+}
+.purch-input{
+    width:44.3%;
+    height: 100%;
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 5.4%;
+}
+
+.purch-input input{
+    border-radius: 5px;
+    font-size:14px;
+    height:35px;
+    border:1px solid#DDDDDD;
+    font-family:montserrategular;
+    color:#4A4A4A;
+    width:100%;
+    margin-top:6px;
+}
+
+.purch-textarea{
+    width:100%;
+    height:60px;
+    left:4.5%;
+    position: relative;
+    margin-top:50px;
+}
+.purch-textarea textarea{
+    width:93.6%;
+    height:177px;
+    resize: none;
+    left:1%;
+    position: absolute;
+}
+.btn-submit-purch{
+    background-color: #f26f21;
+    width:32%;
+    height: 40px;
+    position: absolute;
+    left:35%;
+    color:white;
+    font-family: montserrategular;
+    font-size: 13px;
+    border-radius: 5px;
+    margin-top:19%;
+}
+.frame2-purch textarea:focus,input:focus,select:focus{
+    outline: none;
+    border:1px solid #f26f21;
+    transition:all .96s ease-out;
+}
+
+.row2-purch-info{
+    margin-top:80px;
+    margin-left:1%;
+
+}
+.table-purch-input{
+    display: inline-block;
+    margin-left:14px;
+    width:25%;
+    position: relative;
+}
+.table-purch-input input{
+    width:100%;
+    height:31px;
+    font-family: montserrategular;
+    font-size:14px;
+    border-radius:4px;
+    border:1px solid #E3E3E3;
+    margin-top:5px;
+}
+
+
+.table-purch{
+    height:470px;
+    margin-top:10px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+
+}
+
+.table-purch table td{
+    font-size:14px;
+    font-family:montserrategular;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    border-bottom: 1px solid #E3E3E3;
+    text-align: left;
+    color:#4A4A4A;
+}
+.table-purch table tr:hover{
+    background-color:#EDEDEA;
+    cursor: pointer;
+}
+.table-purch table .thead:hover{
+    background-color:#fff;
+}
+.table-purch table th{
+    font-family:montserratsemibold;
+    font-size:13px;
+    text-align: left;
+    color:#f26f21;
+    border-bottom: 1px solid #E3E3E3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    border-collapse: collapse;
+   
+}

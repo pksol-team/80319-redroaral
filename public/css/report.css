@@ -1,0 +1,183 @@
+
+.frame1-report{
+    position: relative;
+    left:4%;
+    height:6vh;
+    width:93%;
+    top:3%;
+    border-radius: 7px;
+}
+
+.frame2-report{
+    position: absolute;
+    left:4%;
+    height:480px;
+    width:23%;
+    top:11.7%;
+    border-radius: 7px;
+    background-color: #fff;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.2);
+}
+.frame3-report{
+    position: absolute;
+    left:29%;
+    height:78vh;
+    width:67.9%;
+    top:11.7%;
+    border-radius: 7px;
+    background-color: #fff;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.2);
+}
+.cont-report{
+    position: absolute;
+    left:29%;
+    height:78vh;
+    width:67.9%;
+    top:11.7%;
+    border-radius: 7px;
+    background-color: #fff;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.2);
+}
+.btn-report{
+    display: inline-block;
+    position: absolute;
+}
+
+.btn-report button{
+    height: 100%;
+    width:100%;
+    font-family: montserrategular;
+    background-color:transparent;
+    border:0px;
+    color:#666666;
+    font-size:14px;
+    
+  
+}
+
+#btn-inv-report{
+    height: 100%;
+    width:14.3%;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    background-color: #E8E8E8;
+}
+#btn-purch-report{
+    height: 100%;
+    width:14%;
+    left:14.3%;
+    background-color: #E8E8E8;
+  
+}
+#btn-server-report{
+    height: 100%;
+    width:14.3%;
+    left:28.3%;
+    background-color: #E8E8E8;
+}
+#btn-voicedid-report{
+    height: 100%;
+    width:14.3%;
+    left:42.4%;
+    background-color: #E8E8E8;
+}
+
+#btn-ip-report{
+    height: 100%;
+    width:15.3%;
+    left:56.7%;
+    background-color: #E8E8E8;
+}
+
+#btn-pm-report{
+    height: 100%;
+    width:14.3%;
+    left:72%;
+    background-color: #E8E8E8;
+}
+#btn-changereq-report{
+    height: 100%;
+    width:14.3%;
+    left:85.8%;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #E8E8E8;
+}
+
+.report-title{
+    top:3%;
+    left:2.3%;
+    position: absolute;
+    font-size:23px;
+    font-family:montserrategular;
+    color:#4A4A4A;
+}
+.iopex-logo-report{
+    position: absolute;
+    top:34%;
+    left:42%;
+
+}
+.btn-excel-report {
+    background-color: #f26f21;
+    color:white;
+    height: 39.5%;
+    width: 89%;
+    border:0px;
+    border-radius: 9px;
+    left:5.3%;
+    top:50%;
+    position: relative;
+    font-family: montserrategular;
+    font-size: 14px;
+}
+
+.btn-generate-report {
+    background-color: #f26f21;
+    color:white;
+    width:89%;
+    height:7.3%;
+    border:0px;
+    border-radius: 9px;
+    left:5.3%;
+    top:49%;
+    position: relative;
+    font-family: montserrategular;
+    font-size: 14px;
+}
+.btn-text{
+    bottom:5%;
+    position: absolute;
+    left:30%;
+  
+}
+.report-info{
+position: absolute;
+top:20px;
+left:5.3%;
+}
+.report-label{
+    margin-top:60px;
+}
+.report-label label{
+    margin-top:200px;
+    width: 100%;
+    font-family: montserrategular;
+    color:#606060;
+    font-size:12px;
+}
+.date-report{
+    position: absolute;
+    top:65px;
+}
+.date-report input{
+    margin-left:5%;
+    margin-top:40px;
+    width:88%;
+    height:35px;
+    color:rgb(17, 17, 17);
+    border:1px solid#DDDDDD;
+    font-family: montserrategular;
+    border-radius: 5px;
+    font-size:14px;
+}
