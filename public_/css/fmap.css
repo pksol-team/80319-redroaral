@@ -1,0 +1,1841 @@
+@font-face{
+
+    font-family: montserrategular;
+    src: url('../font/Montserrat-Regular.ttf');
+  
+}
+
+@font-face{
+
+    font-family: montserratmedium;
+    src: url('../font/Montserrat-Medium.ttf');
+  
+}
+@font-face{
+
+    font-family: montserratsemibold;
+    src: url('../font/Montserrat-SemiBold.ttf');
+  
+}
+body{
+    font-family:montserrategular;
+}
+
+.floor-map-logo{
+    position: absolute;
+    margin-top:400px;
+    margin-left:490px;
+   
+}
+.floor-map-logo img{
+    height: 158px;
+    width:1100px;
+}
+.action-btn{
+position: fixed;
+margin-top: 20%;
+margin-left:.3%;
+z-index:30;
+
+
+}
+.action-btn button{
+    background-color:#FEFEFE;
+    height:29px;
+    width: 29px;
+    border:0px;
+    margin-top:-3px;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.2);
+    border:0px;
+
+}
+
+.action-btn img{
+    height:20px;
+    width:20px;
+    position: absolute;
+    margin-top:-10px;
+    margin-left:-10px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.zoom-off{
+   
+}
+
+.body-floor-map{
+background-color:white;
+font-family:montserrategular;
+overflow:hidden;
+overflow-x: auto;
+overflow-y:scroll;
+height: 595px;
+width:100%;
+position: absolute;
+margin-top:65px;
+
+
+}
+
+.body-floor-map button{
+    font-family:montserrategular;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    padding: 4px 0px;
+    outline: none;
+}
+
+.btn-window button{
+    font-size: 15px;
+    background-color: white;
+    border: 1px solid gray;
+    font-family: montserratmedium;
+
+
+}
+.second-body-map{
+    zoom:70%;
+}
+.body-floor-map button:hover{
+    background-color: #f26f21;
+    color:white;
+    border: 1px solid #f26f21;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.2);
+}
+
+.buttonwindow .button { /* Vertical */
+    width: 330px;
+}
+.buttonwindow1 .button { /* Horizontal */
+    -webkit-transform: rotate(270deg);
+    width: 280px;
+    margin-top: -4px;
+    position: absolute;
+}
+.buttonwindow2 .button { /* Vertical */
+    width: 142px;
+}
+.buttonwindow3 .button { /* Vertical */
+    width: 110px;
+ 
+}
+.buttonwindow4 .button { /* Vertical */
+    width: 2235px;
+}
+.buttonwindow5 .button { /* Horizontal */
+    -webkit-transform: rotate(270deg);
+    width: 230px;
+    margin-top: -4px;
+    position: absolute;
+    margin-left:8px;
+}
+.buttonwindow6 .button { /* Horizontal */
+    -webkit-transform: rotate(270deg);
+    width: 100px;
+    margin-top: 5px;
+    position: absolute;
+    margin-left:8px;
+
+ 
+}
+.buttonwindow7 .button { /* Horizontal */
+    -webkit-transform: rotate(270deg);
+    width: 100px;
+    margin-top: -15px;
+    position: absolute;
+    margin-left:8px;
+}
+.buttonwindow8 .button { /* Horizontal */
+     -webkit-transform: rotate(270deg);
+    width: 188px;
+    position: absolute;
+    margin-left:30px;
+    margin-top:-10px;
+}
+.buttonwindow9 .button { /* Vertical */
+    width: 870px;
+
+}
+.buttonwindow10 .button { /* Horizontal */
+    -webkit-transform: rotate(270deg);
+    width: 240px;
+}
+.buttonwindow11 .button { /* Vertical */
+    width: 1045px;
+    margin-left:50px;
+    position: absolute;
+}
+
+
+
+.btn-tl button{
+    background-color: black;
+    color: white;
+    font-size:12px;
+    width: 100px;
+    height: 25px;
+    border:0px;
+}
+
+.buttonVEENAJ .button { /* Vertical */
+    width: 60px;
+}
+/*            
+                                                 FREE **************************   */
+.btn-free button{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    width: 60px;
+    height: 25px;
+    outline:none;
+    font-family:montserrategular;
+}                                                 
+
+.btn-blank button{
+    background-color: white;
+    border: 1px solid black;
+    padding: 4px 0px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+}
+.buttonblank .button { /* Vertical */
+    width: 55px;
+    height: 25px;
+}
+.buttonblank1 .button { /* Vertical */
+    width: 70px;
+    height: 25px;
+}
+.buttonblank2 .button { /* Vertical */
+    width: 55px;
+    height: 25px;
+}
+.buttonblank3 .button { /* Vertical */
+    width: 70px;
+    height: 25px;
+}
+.buttonblank4 .button { /* Vertical */
+    width: 40px;
+    height: 45px;
+}
+
+.buttonDataCenter .button { /* Vertical */
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    font-size: 11px;
+    width: 55px;
+    height: 50px;
+}
+
+.btn-mix button{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+.buttonAIO .button { /* Vertical */
+    width: 55px;
+    height: 25px;
+}
+.buttonFD .button { /* Vertical */
+    width: 35px;
+    height: 25px;
+}
+.button143 .button { /* Vertical */
+    width: 35px;
+    height: 47px;
+
+}
+.button180 .button { /* Vertical */
+    width: 35px;
+    height: 50px;
+}
+.button181 .button { /* Vertical */
+    width: 40px;
+    height: 50px;
+
+}
+.button182 .button { /* Vertical */
+    width: 45px;
+    height: 50px;
+}
+
+
+
+.button577 .button { /* Vertical */
+    background-color: white;
+    border: 1px solid black;
+    padding: 4px 0px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+    width: 68px;
+    height: 25px;
+    display: block;
+    cursor: pointer;
+}
+.button578 .button { /* Vertical */
+    background-color: white;
+    border: 1px solid black;
+    padding: 4px 0px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+    width: 55px;
+    height: 25px;
+    display: block;
+    cursor: pointer;
+}
+
+.button567 .button { /* Vertical */
+    background-color: white;
+    border: 1px solid black;
+    padding: 4px 0px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+    width: 60px;
+    height: 25px;
+    display: block;
+    cursor: pointer;
+}
+.button581 .button { /* Vertical */
+    background-color: white;
+    border: 1px solid black;
+    padding: 4px 0px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+    width: 60px;
+    height: 25px;
+    display: block;
+    cursor: pointer;
+}
+.button184-V .button { /* Vertical */
+    background-color: white;
+    border: 1px solid black;
+    padding: 4px 0px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+    width: 55px;
+    height: 25px;
+    display: block;
+    cursor: pointer;
+}
+.button185 .button { /* Vertical */
+    background-color: white;
+    border: 1px solid black;
+    padding: 4px 0px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+    width: 70px;
+    height: 25px;
+    display: block;
+    cursor: pointer;
+}
+.button186 .button { /* Vertical */
+    background-color: white;
+    border: 1px solid black;
+    padding: 4px 0px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+    width: 70px;
+    height: 25px;
+    display: block;
+    cursor: pointer;
+}
+.button187 .button { /* Vertical */
+    background-color: white;
+    border: 1px solid black;
+    padding: 4px 0px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+    width: 55px;
+    height: 25px;
+    display: block;
+    cursor: pointer;
+}
+.buttonSATYA .button { /* Vertical */
+    background-color: black;
+    border: 1px solid black;
+    padding: 4px 0px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+    width: 110px;
+    height: 25px;
+    display: block;
+    cursor: pointer;
+}
+/* Team Leader **************************************************************************/ 
+.btn-tl-2 button{
+    background-color: black;
+    border: 1px solid black;
+    padding: 4px 0px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    cursor: pointer;
+}
+.buttonJUSTINE .button { /* Vertical */
+    width: 57px;
+    height: 55px;
+
+}
+.buttonJEP .button { /* Vertical */
+    width: 57px;
+    height: 45px;
+}
+.buttonJADE .button { /* Vertical */
+    width: 132px;
+    height: 45px;
+}
+
+.btn-bay-group button{
+    background-color: white; 
+    border: 1px solid black;
+    padding: 4px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 11px;
+    display: block;
+    width: 55px;
+}
+
+.btn-group .button { /* Horizontal */
+    float: left;
+    color:white;
+}
+
+/*                                             DOOR ***********************************/
+.btn-door button{
+    background-color: black;
+    border: 1px solid black;
+    color:white;
+    padding: 4px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    display: block;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.buttondoor1 .button { /* Vertical */
+    position: absolute;
+    margin-top:-300px;
+    width: 60px;
+}
+.buttondoor2 .button { /* Vertical */
+
+    width: 80px;
+    height: 25px;
+
+}
+.buttondoor3 .button { /* Vertical */
+    width: 40px;
+    height: 25px;
+}
+.buttondoor4 .button { /* Vertical */
+    width: 135px;
+    height: 25px;
+ 
+}
+.buttondoor5 .button { /* Vertical */
+    width: 125px;
+    height: 25px;
+
+}
+.buttondoor6 .button { /* Vertical */
+    width: 125px;
+    height: 25px;
+}
+.buttondoor7 .button { /* Vertical */
+    width: 125px;
+    height: 25px;
+
+}
+.buttondoor8 .button { /* Vertical */
+    width: 125px;
+    height: 25px;
+}
+
+
+
+.buttoncorregidor .button { /* Vertical */
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    font-size: 11px;
+    width: 109px;
+    height: 25px;
+}
+
+.btn-bay2-group button{
+    background-color: white;
+    border: 1px solid black;
+    padding: 4px 16px;
+    cursor: pointer;
+    display: inline-block;
+    display: block;
+    font-size: 12px;
+    width: 55px;
+}
+
+.buttoncb .button { /* Vertical */
+    font-size: 11px;
+    width: 60px;
+}
+
+
+
+.button425 .button { /* Vertical */
+    background-color: white;
+    border: 1px solid black;
+    padding: 4px 50px;
+    font-size: 12px;
+    width: 60px;
+}
+
+.btn-bay3-group button{
+    background-color: white;
+    border: 1px solid black;
+    padding: 4px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    width: 55px;
+    display: block;
+}
+ 
+
+.btn-group45 .button { /* Horizontal */
+    float: left;
+    color:white;
+}          
+
+
+
+.buttonwindow{
+    background-color: white;
+    border: none;
+    color: white;
+    margin-top: 0px;
+    margin-left: 55px;
+    position: absolute;
+    width: 60px;
+    height: 47px;
+}  
+.buttonwindow1{
+    background-color: white;
+    border: none;
+    color: white;
+    margin-top: 175px;
+    margin-left: -110px;
+    position: absolute;
+    width: px;
+    height: 47px;
+}
+.buttonwindow2{
+    background-color: white;
+    border: none;
+    color: white;
+    margin-top: 0px;
+    margin-left: 435px;
+    position: absolute;
+    width: 60px;
+    height: 47px;
+}
+.buttonwindow3{
+    background-color: white;
+    border: none;
+    color: white;
+    margin-top: 0px;
+    margin-left: 585px;
+    position: absolute;
+    width: 60px;
+    height: 47px;
+}
+.buttonwindow4{
+    background-color: white;
+    border: none;
+    color: white;
+    margin-top: 0px;
+    margin-left: 710px;
+    position: absolute;
+    width: 60px;
+    height: 47px;
+}
+.buttonwindow5{
+    background-color: white;
+    border: none;
+    color: white;
+    margin-top: 160px;
+    margin-left: 2900px;
+    position: absolute;
+    width: px;
+    height: 47px;
+}
+.buttonwindow6{
+    background-color: white;
+    border: none;
+    color: white;
+    margin-top: 380px;
+    margin-left: 2965px;
+    position: absolute;
+    width: px;
+    height: 27px;
+}
+.buttonwindow7{
+    background-color: white;
+    border: none;
+    color: white;
+    margin-top: 590px;
+    margin-left: 2965px;
+    position: absolute;
+    width: px;
+    height: 27px;
+}
+.buttonwindow8{
+    background-color: white;
+    border: none;
+    color: white;
+    margin-top: 850px;
+    margin-left: 2900px;
+    position: absolute;
+    width: px;
+    height: 47px;
+}
+.buttonwindow9{
+    background-color: white;
+    border: none;
+    color: white;
+    margin-top: 1000px;
+    margin-left: 2130px;
+    position: absolute;
+    width: 60px;
+    height: 47px;
+}
+.buttonwindow10{
+    background-color: white;
+    border: none;
+    color: white;
+    margin-top: 850px;
+    margin-left: -90px;
+    position: absolute;
+    width: px;
+    height: 47px;
+}
+.buttonwindow11{
+    background-color: white;
+    border: none;
+    color: white;
+    margin-top: 1000px;
+    margin-left: 50px;
+    position: absolute;
+    width: 60px;
+    height: 47px;
+}
+.button425{
+    background-color: white;
+    border: none;
+    color: white;
+    margin-top: 45px;
+    margin-left: 475px;
+    position: absolute;
+    width: 60px;
+    height: 47px;
+} 
+.buttonISO{
+    margin-top: 175px;
+    margin-left: 475px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonAPO{
+    margin-top: 250px;
+    margin-left: 475px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonVEENAJ{
+    margin-top: 175px;
+    margin-left: 585px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+/*                                                  FREE *************************/
+.buttonFREE{
+    margin-top: 250px;
+    margin-left: 585px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonFREE1{
+    margin-top: 732px;
+    margin-left: 2000px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonFREE2{
+    margin-top: 732px;
+    margin-left: 2050px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonFREE3{
+    margin-top: 830px;
+    margin-left: 2000px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonFREE4{
+    margin-top: 875px;
+    margin-left: 2000px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonFREE5{
+    margin-top: 950px;
+    margin-left: 2000px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonblank{
+    margin-top: 793px;
+    margin-left: 1345px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonblank1{
+    margin-top: 793px;
+    margin-left: 1433px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonblank2{
+    margin-top: 793px;
+    margin-left: 1536px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonblank3{
+    margin-top: 909px;
+    margin-left: 1468px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonblank4{
+    margin-top: 909px;
+    margin-left: 1535px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonDataCenter{
+    margin-top: 793px;
+    margin-left: 1590px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonAIO{
+    margin-top: 818px;
+    margin-left: 1804px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonFD{
+    margin-top: 794px;
+    margin-left: 1858px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.button143{
+    margin-top: 930px;
+    margin-left: 1857px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.button180{
+    margin-top: 817px;
+    margin-left: 1345px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.button181{
+    margin-top: 817px;
+    margin-left: 1433px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.button182{
+    margin-top: 817px;
+    margin-left: 1536px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.button577{
+    margin-top: 885px;
+    margin-left: 1468px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.button578{
+    margin-top: 885px;
+    margin-left: 1535px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.button567{
+    margin-top: 793px;
+    margin-left: 1085px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.button581{
+    margin-top: 838px;
+    margin-left: 1085px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.button184-V{
+    margin-top: 953px;
+    margin-left: 1345px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.button185{
+    margin-top: 953px;
+    margin-left: 1399px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.button186{
+    margin-top: 953px;
+    margin-left: 1468px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.button187{
+    margin-top: 953px;
+    margin-left: 1535px;
+    position: absolute;
+    width: 60px;
+    height: 0px;
+}
+.buttonSATYA{
+    margin-top: 45px;
+    margin-left: 1925px;
+    position: absolute;
+    width: 100px;
+    height: 0px;
+}
+      
+    
+    
+/* TL ******************************************       TL                *********/
+.buttonJUSTINE{
+    margin-top: 190px;
+    margin-left: 1330px;
+    position: absolute;
+    width: 50px;
+    height: 0px;
+}
+.buttonJEP{
+    margin-top: 250px;
+    margin-left: 2435px;
+    position: absolute;
+    width: 50px;
+    height: 0px;
+}
+.buttonJADE{
+    margin-top: 250px;
+    margin-left: 2500px;
+    position: absolute;
+    width: 50px;
+    height: 0px;
+}
+
+.btn-group .button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+.btn-group .button {
+    background-color: #555555;
+}
+.btn-group{
+    margin-top:45px;
+    margin-left: 55px;
+    position:absolute;
+}
+.btn-group1 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group1{
+    margin-top:85px;
+    margin-left: 55px;
+    position:absolute;
+}
+.btn-group2 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group2 #large{
+    width:106px;    
+}
+.btn-group2{
+    margin-left: 160px;
+    margin-top: 85px;
+    position:absolute;   
+}    
+.btn-group3 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group3{
+    margin-left: 211px;
+    margin-top: 85px;
+    position:absolute; 
+}
+.btn-group4 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group4{
+    margin-left: 319px;
+    margin-top: 85px;
+    position:absolute;    
+}
+/*  DOOR*******************************************************************************/
+.buttondoor #large{
+    background-color: black;
+    border: none;
+    color: white;
+    margin-left: 374px;
+    margin-top: 152px;
+    position: absolute;
+    width: 60px;
+    height: 46px;
+}
+.buttondoor1{
+    margin-top: 250px;
+    margin-left: 1215px;
+    position: absolute;
+} 
+.buttondoor2{
+    margin-top: 250px;
+    margin-left: 2295px;
+    position: absolute;
+} 
+.buttondoor3{
+    margin-top: 250px;
+    margin-left: 2395px;
+    position: absolute;
+
+}
+.buttondoor4{
+    margin-top: 294px;
+    margin-left: 2629px;
+    position: absolute;
+
+}
+.buttondoor5{
+    margin-top: 670px;
+    margin-left: 2695px;
+    position: absolute;
+
+}
+.buttondoor6{
+    margin-top: 670px;
+    margin-left: 2000px;
+    position: absolute;
+
+}
+.buttondoor7{
+    margin-top: 700px;
+    margin-left: 1800px;
+    position: absolute;
+ 
+}
+.buttondoor8{
+    margin-top: 670px;
+    margin-left: 950px;
+    position: absolute;
+
+}
+.buttoncorregidor{
+    margin-top: 608px;
+    margin-left: 2380px;
+    position: absolute;
+}
+
+
+
+
+
+.btn-group5 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group5{
+    margin-left: 55px;
+    margin-top: 230px;
+    position:absolute;
+}
+.btn-group6 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group6{
+    margin-left: 108px;
+    margin-top: 230px;
+    position:absolute;
+}
+.btn-group7 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group7{
+    margin-left: 265px;
+    margin-top: 230px;
+    position:absolute;
+}
+.btn-group8 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group8{
+    margin-left: 319px;
+    margin-top: 230px;
+    position:absolute;
+}    
+.buttoncb #large{
+    background-color: black;
+    border: none;
+    color: white;
+    margin-left: 374px;
+    margin-top: 230px;
+    position: absolute;
+    width: 60px;
+    height: 48px;
+}    
+.btn-group9 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group9{
+    margin-left: 585px;
+    margin-top: 45px;
+    position:absolute; 
+}
+.btn-group10 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group10{
+    margin-left: 639px;
+    margin-top: 45px;
+    position:absolute; 
+}
+.btn-group11 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group11{
+    margin-left: 710px;
+    margin-top: 45px;
+    position:absolute; 
+}     
+.btn-group12 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group12{
+    margin-left: 764px;
+    margin-top: 45px;
+    position:absolute; 
+}
+.btn-group13 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group13{
+    margin-left: 835px;
+    margin-top: 45px;
+    position:absolute; 
+}
+.btn-group14 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group14{
+    margin-left: 889px;
+    margin-top: 45px;
+    position:absolute; 
+}
+.btn-group15 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group15{
+    margin-left: 960px;
+    margin-top: 45px;
+    position:absolute; 
+}       
+.btn-group16 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group16{
+    margin-left: 1014px;
+    margin-top: 68px;
+    position:absolute; 
+}       
+.btn-group17 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group17{
+    margin-left: 1085px;
+    margin-top: 68px;
+    position:absolute; 
+}  
+.btn-group18 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group18{
+    margin-left: 1139px;
+    margin-top: 45px;
+    position:absolute; 
+}    
+.btn-group19 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group19{
+    margin-left: 1210px;
+    margin-top: 45px;
+    position:absolute; 
+}    
+.btn-group20 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group20{
+    margin-left: 1264px;
+    margin-top: 45px;
+    position:absolute; 
+}    
+.btn-group21 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group21{
+    margin-left: 1395px;
+    margin-top: 45px;
+    position:absolute; 
+}    
+.btn-group22 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group22{
+    margin-left: 1449px;
+    margin-top: 45px;
+    position:absolute; 
+}    
+.btn-group23 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group23{
+    margin-left: 1520px;
+    margin-top: 68px;
+    position:absolute; 
+}             
+.btn-group24 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group24{
+    margin-left: 1574px;
+    margin-top: 45px;
+    position:absolute; 
+}       
+.btn-group25 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group25{
+    margin-left: 1650px;
+    margin-top: 45px;
+    position:absolute; 
+}      
+.btn-group26 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group26{
+    margin-left: 1704px;
+    margin-top: 45px;
+    position:absolute; 
+}     
+.btn-group27 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group27{
+    margin-left: 1780px;
+    margin-top: 45px;
+    position:absolute; 
+}     
+.btn-group28 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group28{
+    margin-left: 1834px;
+    margin-top: 45px;
+    position:absolute; 
+}     
+.btn-group29 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group29{
+    margin-left: 1925px;
+    margin-top: 90px;
+    position:absolute; 
+}     
+.btn-group30 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group30{
+    margin-left: 1979px;
+    margin-top: 90px;
+    position:absolute; 
+}     
+.btn-group31 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group31{
+    margin-left: 2050px;
+    margin-top: 45px;
+    position:absolute; 
+}     
+.btn-group32 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group32{
+    margin-left: 2104px;
+    margin-top: 45px;
+    position:absolute; 
+}     
+.btn-group33 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group33{
+    margin-left: 2180px;
+    margin-top: 45px;
+    position:absolute; 
+}     
+.btn-group34 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group34{
+    margin-left: 2234px;
+    margin-top: 45px;
+    position:absolute; 
+}     
+.btn-group35 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group35{
+    margin-left: 2380px;
+    margin-top: 45px;
+    position:absolute; 
+}                 
+.btn-group36 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group36{
+    margin-left: 2434px;
+    margin-top: 45px;
+    position:absolute; 
+}    
+.btn-group37 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group37{
+    margin-left: 2500px;
+    margin-top: 68px;
+    position:absolute; 
+}     
+.btn-group38 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group38{
+    margin-left: 2554px;
+    margin-top: 45px;
+    position:absolute; 
+}     
+.btn-group39 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group39{
+    margin-left: 2640px;
+    margin-top: 45px;
+    position:absolute; 
+}     
+.btn-group40 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group40{
+    margin-left: 2694px;
+    margin-top: 45px;
+    position:absolute; 
+}     
+.btn-group41 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group41{
+    margin-left: 2765px;
+    margin-top: 45px;
+    position:absolute; 
+}     
+.btn-group42 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group42{
+    margin-left: 2819px;
+    margin-top: 45px;
+    position:absolute; 
+}     
+.btn-group43 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group43{
+    margin-left: 2890px;
+    margin-top: 45px;
+    position:absolute; 
+}             
+.btn-group44 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group44{
+    margin-left: 2944px;
+    margin-top: 68px;
+    position:absolute; 
+}    
+.btn-group45 .button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+.btn-group45 .button{
+    background-color: #555555;
+}
+.btn-group45 {
+    margin-top:300px;
+    margin-left: 55px;
+    position:absolute;
+}      
+.btn-group46 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group46{
+    margin-left: 2180px;
+    margin-top: 195px;
+    position:absolute; 
+}     
+.btn-group47 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group47{
+    margin-left: 2234px;
+    margin-top: 195px;
+    position:absolute; 
+}    
+.btn-group48 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group48{
+    margin-left: 2435px;
+    margin-top: 355px;
+    position:absolute; 
+}     
+.btn-group49 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group49{
+    margin-left: 2500px;
+    margin-top: 355px;
+    position:absolute; 
+}     
+.btn-group50 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group50{
+    margin-left: 2550px;
+    margin-top: 355px;
+    position:absolute; 
+}     
+.btn-group51 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group51{
+    margin-left: 2640px;
+    margin-top: 355px;
+    position:absolute; 
+}     
+.btn-group52 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group52{
+    margin-left: 2694px;
+    margin-top: 355px;
+    position:absolute; 
+}     
+.btn-group53 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group53{
+    margin-left: 2765px;
+    margin-top: 355px;
+    position:absolute; 
+}     
+.btn-group54 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group54{
+    margin-left: 2819px;
+    margin-top: 355px;
+    position:absolute; 
+}     
+.btn-group55 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group55{
+    margin-left: 2890px;
+    margin-top: 355px;
+    position:absolute; 
+}     
+.btn-group56 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group56{
+    margin-left: 2944px;
+    margin-top: 378px;
+    position:absolute; 
+}     
+.btn-group57 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group57{
+    margin-left: 2380px;
+    margin-top: 540px;
+    position:absolute; 
+}     
+.btn-group58 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group58{
+    margin-left: 2434px;
+    margin-top: 540px;
+    position:absolute; 
+}     
+.btn-group59 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group59{
+    margin-left: 2500px;
+    margin-top: 540px;
+    position:absolute; 
+}     
+.btn-group60 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group60{
+    margin-left: 2554px;
+    margin-top: 540px;
+    position:absolute; 
+}     
+.btn-group61 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group61{
+    margin-left: 2640px;
+    margin-top: 540px;
+    position:absolute; 
+}     
+.btn-group62 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group62{
+    margin-left: 2694px;
+    margin-top: 540px;
+    position:absolute; 
+}     
+                             
+.btn-group63 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group63{
+    margin-left: 2765px;
+    margin-top: 540px;
+    position:absolute; 
+}     
+.btn-group64 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group64{
+    margin-left: 2819px;
+    margin-top: 540px;
+    position:absolute; 
+}     
+                             
+.btn-group65 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group65{
+    margin-left: 2890px;
+    margin-top: 540px;
+    position:absolute; 
+}     
+                             
+.btn-group66 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group66{
+    margin-left: 2945px;
+    margin-top: 760px;
+    position:absolute; 
+}     
+                             
+.btn-group67 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group67{
+    margin-left: 2891px;
+    margin-top: 760px;
+    position:absolute; 
+}     
+          
+.btn-group68 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group68{
+    margin-left: 2820px;
+    margin-top: 760px;
+    position:absolute; 
+}     
+                             
+.btn-group69 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group69{
+    margin-left: 2766px;
+    margin-top: 760px;
+    position:absolute; 
+}        
+    
+.btn-group70 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group70{
+    margin-left: 2695px;
+    margin-top: 760px;
+    position:absolute; 
+}     
+                             
+.btn-group71 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group71{
+    margin-left: 2641px;
+    margin-top: 760px;
+    position:absolute; 
+}    
+    
+.btn-group72 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group72{
+    margin-left: 2554px;
+    margin-top: 760px;
+    position:absolute; 
+}     
+                             
+.btn-group73 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group73{
+    margin-left: 2500px;
+    margin-top: 760px;
+    position:absolute; 
+}    
+    
+.btn-group74 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group74{
+    margin-left: 2435px;
+    margin-top: 760px;
+    position:absolute; 
+}     
+                             
+.btn-group75 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group75{
+    margin-left: 2381px;
+    margin-top: 760px;
+    position:absolute; 
+}    
+            
+.btn-group76 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group76{
+    margin-left: 2310px;
+    margin-top: 760px;
+    position:absolute; 
+}     
+                             
+.btn-group77 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group77{
+    margin-left: 2256px;
+    margin-top: 760px;
+    position:absolute; 
+}    
+            
+.btn-group78 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group78{
+    margin-left: 2185px;
+    margin-top: 783px;
+    position:absolute; 
+}     
+                             
+.btn-group79 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group79{
+    margin-left: 2131px;
+    margin-top: 783px;
+    position:absolute; 
+}    
+
+.btn-group80 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group80{
+    margin-left: 100px;
+    margin-top: 770px;
+    position:absolute; 
+}    
+
+.btn-group81 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group81{
+    margin-left: 265px;
+    margin-top: 770px;
+    position:absolute; 
+}    
+.btn-group82 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group82{
+    margin-left: 319px;
+    margin-top: 770px;
+    position:absolute; 
+}             
+.btn-group83 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group83{
+    margin-left: 435px;
+    margin-top: 770px;
+    position:absolute; 
+}     
+.btn-group84 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group84{
+    margin-left: 489px;
+    margin-top: 770px;
+    position:absolute; 
+}     
+.btn-group85 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group85{
+    margin-left: 580px;
+    margin-top: 770px;
+    position:absolute; 
+}           
+.btn-group86 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group86{
+    margin-left: 634px;
+    margin-top: 770px;
+    position:absolute; 
+}           
+.btn-group87 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group87{
+    margin-left: 710px;
+    margin-top: 793px;
+    position:absolute; 
+}        
+.btn-group88 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group88{
+    margin-left: 764px;
+    margin-top: 793px;
+    position:absolute; 
+}        
+.btn-group89 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group89{
+    margin-left: 835px;
+    margin-top: 793px;
+    position:absolute; 
+}            
+.btn-group90 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group90{
+    margin-left: 889px;
+    margin-top: 793px;
+    position:absolute; 
+}     
+.btn-group91 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group91{
+    margin-left: 960px;
+    margin-top: 793px;
+    position:absolute; 
+}     
+.btn-group92 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group92{
+    margin-left: 1014px;
+    margin-top: 793px;
+    position:absolute; 
+}     
+.btn-group93 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group93{
+    margin-left: 1220px;
+    margin-top: 793px;
+    position:absolute; 
+}     
+.btn-group94 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group94{
+    margin-left: 1274px;
+    margin-top: 793px;
+    position:absolute; 
+}     
+.btn-group95 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group95{
+    margin-left: 1274px;
+    margin-top: 908px;
+    position:absolute; 
+}                           
+    
+.btn-group96 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group96{
+    margin-left: 1345px;
+    margin-top: 885px;
+    position:absolute; 
+}                           
+.btn-group97 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group97{
+    margin-left: 1645px;
+    margin-top: 860px;
+    position:absolute; 
+}                           
+.btn-group98 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group98{
+    margin-left: 1696px;
+    margin-top: 860px;
+    position:absolute; 
+}                           
+.btn-group99 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group99{
+    margin-left: 1750px;
+    margin-top: 860px;
+    position:absolute; 
+}                           
+.btn-group100 .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.btn-group100{
+    margin-left: 1804px;
+    margin-top: 860px;
+    position:absolute; 
+} 

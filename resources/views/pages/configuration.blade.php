@@ -22,9 +22,9 @@
 	                	    <input type="text" name="vat" value="{{ $vat->vat }}" disabled="">
 
 	                	</div>
-	                		<button type="submit" class="btn btn-primary">Edit</button>
+	                		<button type="submit" class="btn btn-primary edit_vat" >Edit</button>
 
-	                		<button type="submit" class="btn btn-success">Update</button>
+	                		<button type="submit" class="btn btn-success update_vat" >Update</button>
 
 	                	<br>
 	                	<table class="product_data">
@@ -59,52 +59,11 @@
 					                    <button type="submit" class="edit_lead">Edit</button>
 				                		<button type="submit" class="update_lead">Update</button>	
 				                    </td>
-				                    {{-- <div class="changereq-input-3 product_data">
-				                    </div>
-				                    <div class="changereq-input-3 product_data">
-				                    </div>
-				                    <div class="changereq-input-3 product_data">
-				                    </div> --}}
-			                    	
-
 								</tr>
 			                    @endforeach
 							</tbody>
 	                	</table>
-	                   {{--  <div class="changereq-input-3">
-	                        <label>Request Type</label>
-	                    </div>
-	                    <div class="changereq-input-3">
-	                        <label>Package</label>								
-	                    </div>
-	                    <div class="changereq-input-3">
-	                        <label>Cost Per Lead</label>
-	                    </div>
-	                    		 @foreach ($data as $products)
-
-				
-	                    
-				                    <input type="hidden" name="id" value="{{ $products->id }}">
-
-				                    <div class="changereq-input-3 product_data">
-				                        <input type="text" name="product_type" value="{{ $products->product_type }}" disabled="">
-				                    </div>
-				                    <div class="changereq-input-3 product_data">
-				                        <input type="text" name="product_name" value="{{ $products->product_name }}" disabled="">
-				                    </div>
-				                    <div class="changereq-input-3 product_data">
-				                        <input type="text" name="item_cost" value="{{ $products->price }}" disabled="">
-				                    </div>
-			                    	
-				                    <button type="submit" class="edit_lead">Edit</button>
-
-			                		<button type="submit" class="update_lead">Update</button>	                    	
-			                    @endforeach
-	                    --}}
-
-		                {{-- <button type="submit" class="btn-changereq-submit-2">Update</button> --}}
 		            </div>
-		        {{-- </form> --}}
 	        </div>
 		</div>
 	</div>	
@@ -114,7 +73,7 @@
 		
 	jQuery(document).ready(function($) {
 		$(document).on('click', '.edit_vat', function(event) {
-
+            console.log($(this));
 			$("div.vat_data").find('input').removeAttr('disabled');
 
 		});
@@ -146,18 +105,18 @@
 
 		$(document).on('click', '.edit_lead', function(event) {
 
-			$(this).closest('tr').find('input').removeAttr('disabled');
+			$(this).closest('tr').find('input[name="item_cost"]').removeAttr('disabled');
 
 		});
 
 		$(document).on('click', '.update_lead', function(event) {
 			
 			var product_id = $(this).closest('tr').find("input[name='product_id']").val();
-			var product_type = $(this).closest('tr').find("input[name='product_type']").val();
-			var product_name = $(this).closest('tr').find("input[name='product_name']").val();
+// 			var product_type = $(this).closest('tr').find("input[name='product_type']").val();
+// 			var product_name = $(this).closest('tr').find("input[name='product_name']").val();
 			var item_cost = $(this).closest('tr').find("input[name='item_cost']").val();
 
-			console.log(product_id, product_type, product_name, item_cost);
+// 			console.log(product_id, product_type, product_name, item_cost);
 
 			$.ajax({
 				url: '/update_product',
@@ -165,8 +124,8 @@
 				data: {
 						"_token": "{{ csrf_token() }}",
 						id: product_id,
-						type: product_type,
-						name: product_name,
+				// 		type: product_type,
+				// 		name: product_name,
 						cost: item_cost,
 						table: 'products'
 					},

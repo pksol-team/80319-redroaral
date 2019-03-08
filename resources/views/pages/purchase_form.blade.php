@@ -8,24 +8,31 @@
 	            <div class="changereq-title">
 	                <label>New Purchase Form</label>
 	            </div>
-				<form id="contact-form" class="form-horizontal" method="POST" action="/add_customer_order">
+				<form id="contact-form" class="form-horizontal" method="POST" action="/add_customer_order/purchase">
 	              	{{ csrf_field() }}
 		            <div class="row1-changereq-info">
 		            	<div class="changereq-input">
-		            	    <label>Date Placed</label>
-		            	    <input type="text" name="purchased_date" value="{{ date('Y-m-d') }}" >							
+		            	    <label>Start Date</label>
+		            	    <input type="text" class="datepicker-starttime" name="purchased_date" value=""/>
+		            	    <!--<input type="text" name="purchased_date" value="{{ date('Y-m-d') }}" >							-->
 		            	</div>
 		                <div class="changereq-input">
 		                    <label>Request Type</label>								
 		                    <select name="product_type">
-		                    	 <option value="Lead">Lead</option>
+		                        <option value="">Select Request Type</option>
+		                        <option value="Lead">Lead</option>
+		                            <!--<option value="{{ $data[0] ->product_type}}">{{ $data[0] ->product_type}}</option>-->
+		                            <!--<option value="{{ $data[0] ->product_type}}">{{ $data[0] ->product_type}}</option>-->
 		                    	 {{-- <option value="Sales">Sales</option> --}}
 		                    </select>
 		                </div>
 		                <div class="changereq-input">
 		                    <label>Package</label>								
 		                    <select name="product_name">
-		                    	 <option value="">Select Package</option>
+                                <option value="">Select Package</option>
+                                <!--<option value="{{ $data[0] ->product_name}}">{{ $data[0] ->product_name}}</option>-->
+                                <!--<option value="{{ $data[1] ->product_name}}">{{ $data[1] ->product_name}}</option>-->
+                                <!--<option value="{{ $data[2] ->product_name}}">{{ $data[2] ->product_name}}</option>-->
 		                    	 <option value="Bronze">Bronze</option>
 		                    	 <option value="Silver">Silver</option>
 		                    	 <option value="Gold">Gold</option>
@@ -41,10 +48,9 @@
 			                    <input type="text" name="item_cost" value="" readonly="">
 			                </div>
 			                <div class="changereq-input">
-			                    <label>Total(Exclude VAT)</label>
+			                    <label>Total(excluding VAT)</label>
 			                    <input type="text" name="exclude_vat" value="" readonly="">
 			                </div>
-			               
 		                {{-- @endif --}}
 		                <div class="changereq-textarea">
 		                    <label>Comment</label>
@@ -56,6 +62,9 @@
 
 			            <input type="hidden" name="include_vat" value="">
 
+			            
+			            
+			            <!--<input type="hidden" name="order_no" value="{{ rand() }}">-->
 
 		                <button type="submit" class="btn-changereq-submit">Submit</button>
 		            </div>

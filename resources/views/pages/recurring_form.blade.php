@@ -8,7 +8,7 @@
 	            <div class="changereq-title">
 	                <label>New Recurring Form</label>
 	            </div>
-				<form id="contact-form" class="form-horizontal" method="POST" action="/add_customer_order">
+				<form id="contact-form" class="form-horizontal" method="POST" action="/add_customer_order/recurring">
 	              	{{ csrf_field() }}
 		            <div class="row1-changereq-info">
 		            	<div class="changereq-input">
@@ -117,50 +117,5 @@
 		});
 	</script>
 
-
-{{-- <script>
-		jQuery(document).ready(function($) {	
-
-			$('select[name="product_type"], select[name="product_name"]').change(function(){
-				var product_type = $('select[name="product_type"]').val();
-				var product_name = $('select[name="product_name"]').val();
-				var data = [product_type, product_name];
-				$.ajax({
-					url: '/get_data',
-					type: 'POST',
-					data: {
-						"_token": "{{ csrf_token() }}",
-						product_type: product_type,
-						product_name: product_name
-					},
-				})
-				.done(function(response) {
-					var response_data = jQuery.parseJSON(response);
-					$('input[name="item_cost"]').attr('value', response_data.price);
-					// $('b.quantity').html(response_data.price);
-					$('input[name="product_id"]').attr('value', response_data.id);
-					$('input[name="vat"]').attr('value', response_data.vat);
-				});					
-				
-			});
-
-			$("input[name='quantity']").keyup(function() {
-				var quantity = $(this).val();
-
-				var cost = $("input[name='item_cost']").val();
-				
-				var vat = $("input[name='vat']").val();
-
-				var exclude_vat = quantity * cost ;
-
-				$("input[name='exclude_vat']").attr('value', exclude_vat);
-
-				var include_vat = parseInt(vat) + parseInt(exclude_vat);
-
-				$("input[name='include_vat']").attr('value', include_vat);
-				
-			});
-		});
-	</script> --}}
 
 @endsection()

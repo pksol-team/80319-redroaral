@@ -1,0 +1,555 @@
+
+.frame1-pm{
+    position: relative;
+    left:30%;
+    height:45px;
+    width:43%;
+    top:20px;
+    border-radius: 4px;
+
+}
+.frame2-pm{
+    position: relative;
+    left:2.2%;
+    height:220px;
+    width:96%;
+    top:5%;
+    background-color: #fff;
+    border-radius:10px;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+.frame3-pm{
+    background-color: #fff;
+    position: relative;
+    border-radius:10px;
+    height:360px;
+    width:31.1%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    left:2.2%;
+    top:6.5%;
+}
+.frame4-pm{
+    background-color: #fff;
+    position: relative;
+    border-radius:10px;
+    height:360px;
+    width:31.1%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    left:34.6%;
+    top:-31.4%;
+}
+.frame5-pm{
+    background-color: #fff;
+    position: relative;
+    border-radius:10px;
+    height:575px;
+    width:31.1%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    left:67%;
+    top:-69.2%;
+    
+}
+.frame6-pm{
+    background-color: #fff;
+    position: relative;
+    border-radius:10px;
+    height:198px;
+    width:63.6%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    left:2.2%;
+    top:-90.2%;
+    
+}
+.frame7-pm{
+    background-color: #fff;
+    height: 640px;
+    width: 96.6%;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.2);
+    overflow:hidden;
+    left:2.2%;
+    top:40px;
+}
+
+.column-pm4{
+    background-color: #fff;
+    position: relative;
+    border-radius:10px;
+    height:28vh;
+    width:66.5%;
+    top:-164%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.btn-add-pm button{
+    background-color: #E8E8E8;
+    height:100%;
+    width:50%;
+    border-bottom-left-radius:6px;
+    border-top-left-radius:6px;
+    left:0%;
+    position: absolute;
+    display: inline-block;
+    border:0px;
+    font-family:montserrategular;
+    font-size:14px;
+    color:#666666;
+    font-weight: bold;
+}
+
+.btn-view-pm button{
+    background-color: #f26f21;
+    height:100%;
+    width:50%;
+    border-bottom-right-radius:6px;
+    border-top-right-radius:6px;
+    left:50%;
+    position: absolute;
+    display: inline-block;
+    border:0px;
+    font-size:14px;
+    font-family:montserrategular;
+    color:white;
+    font-weight: bold;
+    
+}
+
+.title{
+    position: absolute;
+    font-size:24px;
+    font-family:montserrategular;
+    color:#4A4A4A;
+    top:1.8%;
+    margin-left:.7%
+}
+
+.subtitle{
+    position: absolute;
+    font-size:12px;
+    font-family:montserrategular;
+    top:6.5%;
+    margin-left:1.7%;
+    color:gray;
+}
+#info{
+    left:1%;
+}
+#notes{
+    left:4%;
+}
+#software{
+    left:4%;
+}
+#checklist{
+    left:4%;
+}
+#pm input:focus{
+    outline: none;
+    border:1px solid #f26f21;
+    transition:all .96s ease-out;
+   
+}
+#pm select:focus{
+    outline: none;
+    border:1px solid #f26f21;
+    transition:all .96s ease-out;
+   
+}
+#pm textarea:focus{
+    outline: none;
+    border:1px solid #f26f21;
+    transition:all .96s ease-out;
+   
+}
+#pm input, select, textarea{
+    color:rgb(17, 17, 17);
+    border:1px solid#DDDDDD;
+    font-family: montserrategular;
+    border-radius: 5px;
+    font-size:14px;
+    height:31px;
+}
+::-webkit-input-placeholder{
+    color:lightgray;
+}
+.row1-pm-info{
+    position: absolute;
+    top:10%;
+}
+.pm-input{
+    display: inline-block;
+    width:23.2%;
+    margin-left:1%;
+  
+}
+.pm-input input{
+    width:100%;
+    margin-top:54px;
+}
+#pm-row2-input{
+    margin-top:-2px;
+
+}
+.checklist-input{
+    margin-top:41px;
+    position: absolute;
+    width:173%;
+
+}
+.checklist-input input{
+    width:100%;
+    position: absolute;
+}
+.pm-notes-input input{
+    width:90.2%;
+    margin-left:4.5%;
+    margin-top:40px;
+  
+}
+.pm-software-input{
+    margin-top:90px;
+    position: absolute;
+    width:100%;
+  
+}
+.software-select{
+    margin-top:45px;
+    width:90.5%;
+    height:35px;
+    margin-left:4.5%;
+}
+.row1-pm-label .pm-label{
+    display: inline-block;
+    width:23.2%;
+    height: 31px;
+    margin-top:50px;
+    margin-left:1%;
+}
+.row2-pm-label .pm-label{
+    display: inline-block;
+    width:23.2%;
+    height: 31px;
+    margin-top:57px;
+    margin-left:1%;
+}
+.pm-label label{
+    color:gray;
+    font-size:12px;
+    font-family:montserrategular;
+}
+.notes-label label{
+    color:gray;
+    font-size:12px;
+    font-family:montserrategular;
+}
+.software-label{
+    color:gray;
+    font-size:12px;
+    font-family:montserrategular;
+    margin-top:19%;
+
+}
+#adobe-label{
+    margin-top:66px;
+}
+#ms-label{
+    margin-top:28px;
+}
+#lotus-label{
+    margin-top:63px;
+}
+.pm-software-label{
+    margin-top:53px;
+    margin-left: 4.5%;
+    position: absolute;
+}
+.checklist-label{
+    color:gray;
+    font-size:12px;
+    font-family:montserrategular;
+    position: absolute;
+    margin-top: -119%;
+}
+#virus-label{
+    margin-top: -93%;
+}
+#wsus-label{
+    margin-top: -68%;
+}
+#os-label{
+    margin-top: -41%;
+}
+#admin-label{
+    margin-top: -15%;
+}
+#c-label{
+    margin-top: 10%;
+}
+.comment-label label{
+    color:gray;
+    font-size:12px;
+    font-family:montserrategular;
+    position: absolute;
+}
+
+.row1-notes-info{
+    position: absolute;
+    margin-top: 10.5%;
+    width:100%;
+}
+
+.row2-notes-label {
+    margin-left:4.5%;
+    position: absolute;
+    margin-top:50px;
+}
+
+.row2-notes-label .notes-label{
+    width:100%;
+    
+}
+.row2-notes-label #notes-pm{
+    margin-top:57px;
+  
+}
+
+.comment-label{
+    left:3%;
+    top:5%;
+    position: absolute;
+}
+
+.pm-comment-textarea textarea{
+resize: none;
+position: absolute;
+width: 93%;
+height:100px;
+left:3%;
+top:35px;
+}
+
+.pm-submit{
+    background-color: #f26f21;
+    width:32%;
+    height: 40px;
+    position: absolute;
+    top:75%;
+    left:33%;
+    color:white;
+    font-family: montserrategular;
+    font-size: 13px;
+    border-radius: 5px;
+
+}
+
+/* custom checkbox */
+.checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* hide the browser's default checkbox */
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* create custom checkbox */
+.check {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius:4px;
+    margin-top:65px;
+    margin-left:30%;
+}
+
+/* on mouse-over, add border color */
+.checkbox:hover input ~ .check {
+    border: 1px solid #f26f21;
+}
+
+/* add background color when the checkbox is checked */
+.checkbox input:checked ~ .check {
+    background-color: #f26f21;
+    border:none;
+}
+
+/* create the checkmark and hide when not checked */
+.check:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* show the checkmark when checked */
+.checkbox input:checked ~ .check:after {
+    display: block;
+}
+
+/* checkmark style */
+.checkbox .check:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    border-radius:2px;
+  
+}
+
+
+
+.checklist-checkbox .checkboxc{
+    margin-top: 10%;
+
+}
+
+
+/* custom checkbox */
+.checkboxc {
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* hide the browser's default checkbox */
+.checkboxc input {
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* create custom checkbox */
+.checkc {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius:4px;
+    margin-top:10px;
+    margin-left:100%;
+}
+
+/* on mouse-over, add border color */
+.checkboxc:hover input ~ .checkc {
+    border: 1px solid #f26f21;
+}
+
+/* add background color when the checkbox is checked */
+.checkboxc input:checked ~ .checkc {
+    background-color: #f26f21;
+    border:none;
+}
+
+/* create the checkmark and hide when not checked */
+.checkc:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* show the checkmark when checked */
+.checkboxc input:checked ~ .checkc:after {
+    display: block;
+}
+
+/* checkmark style */
+.checkboxc .checkc:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    border-radius:2px;
+  
+}
+
+.row1-pm-table{
+    margin-top:80px;
+    margin-left:1%;
+
+}
+.table-pm-input{
+    display: inline-block;
+    margin-left:12px;
+    width:25%;
+    position: relative;
+}
+.table-pm-input input{
+    width:100%;
+    height:34px;
+    font-family: montserrategular;
+    font-size:14px;
+    border-radius:4px;
+    border:1px solid #E3E3E3;
+    margin-top:5px;
+}
+.table-pm-input label{
+    color:gray;
+    font-size:12px;
+    font-family:montserrategular;
+}
+
+.table-pm{
+    height:470px;
+    margin-top:10px;
+    overflow-y:scroll;
+}
+
+.table-pm table td{
+    font-size:14px;
+    font-family:montserrategular;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    border-bottom: 1px solid #E3E3E3;
+    text-align: left;
+    color:#4A4A4A;
+}
+.table-pm table tr:hover{
+    background-color:#EDEDEA;
+    cursor: pointer;
+}
+.table-pm table .thead:hover{
+    background-color:#fff;
+}
+.table-pm table th{
+    font-family:montserratsemibold;
+    font-size:13px;
+    text-align: left;
+    color:#f26f21;
+    border-bottom: 1px solid #E3E3E3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    border-collapse: collapse;
+   
+}

@@ -1,0 +1,141 @@
+/*	Login CSS OPEN*/
+.login-body{
+    height:98%;
+    width:100%;
+    position: absolute;
+}
+.login-body img{
+    height:100%;
+    width:100%;
+}
+
+.login-form{
+    height:440px;
+    width:44%;
+    background-color: #fff;
+    position: absolute;
+    margin-top:10%;
+    margin-left:28%;
+    border-radius:10px;
+    box-shadow: 0 5px 9px rgba(0,0,0,0.3);
+    display:inline-block;
+}
+.image-person img{
+    position: absolute;
+    width:45%;
+    height:305px;
+    margin-top:100px;
+    margin-left:5%;
+}
+.title-login{
+    position: absolute;
+    font-size:23px;
+    font-family:montserratmedium;
+    color:#4A4A4A;
+    margin-top:28px;
+    margin-left:15%;
+}
+.subtitle-login{
+    position: absolute;
+    font-size:14px;
+    font-family:montserrategular;
+    margin-top:58px;
+    margin-left:8%;
+    color:#606060;
+}
+.logo-iopex{    
+    width: 40%;
+    height: 25%;
+    margin-top:6%;
+    /*width:77px;
+    height:70px;*/
+   /* margin-left:40%;
+    margin-top:60px;*/
+}
+.row2-title{
+    position: absolute;
+    font-size:18px;
+    margin-left:30%;
+    color: black;
+    font-weight: bolder;
+}
+
+
+.row2-login{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+}
+
+
+.row2-login-info{
+    display: inline-block;
+    position: relative;
+    height:320px;
+    width:75%;
+    left: 18%;
+    /*margin-top:55px;*/
+    /*padding: 0px 55px;*/
+}
+.login-input{
+    /*margin-left:13%;*/
+    display: inline-block;
+    width:82%;
+    margin-top:18px;
+    position: relative;
+}
+.login-input input{
+    width:100%;
+    height:34px;
+    border-radius: 5px;
+    font-family: montserrategular;
+    font-size:14px;
+    margin-top:9px;
+    border-top:0px;
+    border-left:0px;
+    border-right:0px;
+    border-bottom:2px solid gray;
+    text-indent:37px;
+}
+.login-input img{
+    height:28px;
+    width:28px;
+    position: absolute;
+    margin-top:12px;
+}
+.login-input label{
+    font-size:12px;
+    color:gray;
+    font-family: montserrategular;
+}
+.row2-login-info button{
+    height:35px;
+    width:80%;
+    background-color: #f26f21;
+    color:#fff;
+    margin-left:3%;
+    margin-top:47px;
+    border-radius:7px;
+    font-family: montserrategular;
+    font-size:14px;
+}
+.row2-login-info button:hover{
+    background-color: #4A4A4A;
+}
+.login-input input:focus{
+    outline: none;
+    border:2px solid #f26f21;
+    transition:all .96s ease-out;
+    border-bottom-color:#f26f21;
+    transition:all .36s ease-out;
+    border-top:0px;
+    border-left:0px;
+    border-right:0px;
+}
+
+.login_logo{
+    text-align: center;
+}
+/*	LOGIN CSS CLOSE*/
+

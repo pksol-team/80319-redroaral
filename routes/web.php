@@ -32,7 +32,7 @@ Route::get('/genusers/{request}', 'MainController@genusers_index');
 Route::get('/customers/{user}', 'MainController@businessusers_index');
 Route::get('/create_lead_generator', 'MainController@creaetuser_index');
 // Route::get('/leadsubmission', 'MainController@leadsubmission_index');
-Route::post('/add_customer_order', 'MainController@addcustomerorder_index');
+Route::post('/add_customer_order/{form}', 'MainController@addcustomerorder_index');
 Route::post('/get_data', 'MainController@getdata_index');
 Route::get('/add_customer/{user}', 'MainController@addcustomer_index');
 Route::get('/page_404', 'MainController@pagenotfound_index');
@@ -49,15 +49,35 @@ Route::post('/update_order_lead', 'MainController@orderlead_update');
 
 Route::get('/configuration', 'MainController@configuration_index');
 Route::post('/update_product', 'MainController@product_update');
+Route::get('/view_request/{order_id}', 'MainController@viewrequest_show');
+
+
 
 Route::get('/customer_all_leads/{request}/{id}', 'MainController@customerallleads_index');
 Route::get('/lead_all_request/{request}/{id}', 'MainController@leadallrequest_index');
+
 Route::get('/submitted_leads', 'MainController@submittedleads_index');
-Route::get('/view_request/{order_id}', 'MainController@viewrequest_show');
+
 Route::get('/edit_user/{user_id}', 'MainController@edituser');
 
+Route::get('/support', 'MainController@support_view');
+
+Route::get('/new_ticket', 'MainController@ticket_add_page');
+
+Route::get('/title/{support_id}', 'MainController@title_view');
+
+Route::post('/update_user_info', 'MainController@updateuser');
+
+Route::post('/add_ticket_data', 'MainController@ticket_data_add');
+
+Route::post('/add_reply', 'MainController@add_reply');
+
+Route::get('/close_ticket/{ticket_id}/{status}', 'MainController@close_ticket');
 
 Route::post('/check_date', 'MainController@check_date');
+
+
+
 
 
 

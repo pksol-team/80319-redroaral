@@ -1,0 +1,238 @@
+
+.frame1-changereq{
+    position: relative;
+    left:30%;
+    height:45px;
+    width:43%;
+    top:20px;
+    border-radius: 4px;
+}
+.frame2-changereq{
+    position: relative;
+        height: 100%;
+        width: 86%;
+        /*top: 40px;*/
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 3px 9px rgba(0,0,0,0.3);
+}
+.frame3-changereq{
+    background-color: #fff;
+    height: 640px;
+    width: 95%;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.2);
+    overflow:hidden;
+    left:2.5%;
+    top:40px;
+}
+.btn-add-changereq button{
+    background-color: #f26f21;
+    height:100%;
+    width:50%;
+    border-bottom-left-radius:6px;
+    border-top-left-radius:6px;
+    left:0%;
+    position: absolute;
+    display: inline-block;
+    border:0px;
+    font-family:montserrategular;
+    font-size:14px;
+    color:white;
+}
+
+.btn-view-changereq button{
+    background-color: #E8E8E8;
+    height:100%;
+    width:50%;
+    border-bottom-right-radius:6px;
+    border-top-right-radius:6px;
+    left:50%;
+    position: absolute;
+    display: inline-block;
+    border:0px;
+    font-size:14px;
+    font-family:montserrategular;
+    color:#666666;
+}
+.changereq-title{
+   top: 3%;
+    left: 2.3%;
+    position: absolute;
+    font-size: 23px;
+    font-family: montserrategular;
+    color: #4A4A4A;
+}
+.changereq-subtitle{
+    position: absolute;
+    font-size:12px;
+    font-family:montserrategular;
+    top:7.8%;
+    left:2.4%;
+    color:gray;
+}
+
+.row1-changereq-info{
+    position: absolute;
+    top: 54px;
+    left: -3%;
+    display: inline-block;
+    position: relative;
+}
+
+.changereq-input{
+    width:44.3%;
+    height: 100%;
+    display: inline-block;
+    margin-top: 17px;
+    margin-left: 5.4%;
+}
+
+.changereq-textarea{
+    width:100%;
+    height: 100%;
+    display: inline-block;
+    margin-top: 17px;
+    margin-left: 5.4%;
+}
+
+
+.changereq-input input,select, .changereq-input-3 input{
+    border-radius: 5px;
+    font-size:14px;
+    height:35px;
+    border:1px solid#DDDDDD;
+    font-family:montserrategular;
+    color:#4A4A4A;
+    width:100%;
+    margin-top:6px;
+}
+.changereq-input textarea, .changereq-textarea textarea{
+    border-radius: 5px;
+    font-size:14px;
+    height:140px;
+    border:1px solid#DDDDDD;
+    font-family:montserrategular;
+    color:#4A4A4A;
+    width:94%;
+    margin-top:6px;
+    resize: none;
+}
+.changereq-input label{
+    color:gray;
+    font-family:montserrategular;
+    font-size:12px;
+}
+.btn-changereq-submit, .btn-changereq-submit-2, .btn-changereq-submit-3{
+    background-color: #f26f21;
+    width:32%;
+    height: 40px;
+    position: absolute;
+    left:35%;
+    color:white;
+    font-family: montserrategular;
+    font-size: 13px;
+    border-radius: 5px;
+    margin-top:5%;
+}
+.frame2-changereq textarea:focus,input:focus,select:focus{
+    outline: none;
+    border:1px solid #f26f21;
+    transition:all .96s ease-out;
+}
+.frame3-changereq input:focus{
+    outline: none;
+    border:1px solid #f26f21;
+    transition:all .96s ease-out;
+}
+
+
+.row2-changereq-info{
+    margin-top:80px;
+    margin-left:1%;
+
+}
+.table-changereq-input{
+    display: inline-block;
+    margin-left:14px;
+    width:25%;
+    position: relative;
+}
+.table-changereq-input input{
+    width:100%;
+    height:34px;
+    font-family: montserrategular;
+    font-size:14px;
+    border-radius:4px;
+    border:1px solid #E3E3E3;
+    margin-top:5px;
+}
+.table-changereq-input label{
+    color:gray;
+    font-size:12px;
+    font-family:montserrategular;
+}
+
+.table-changereq{
+    height:470px;
+    margin-top:10px;
+    overflow-x:auto;
+    overflow-y:scroll;
+
+}
+
+.table-changereq table td{
+    font-size:14px;
+    font-family:montserrategular;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    border-bottom: 1px solid #E3E3E3;
+    text-align: left;
+    color:#4A4A4A;
+}
+.table-changereq table tr:hover{
+    background-color:#EDEDEA;
+    cursor: pointer;
+}
+.table-changereq table .thead:hover{
+    background-color:#fff;
+}
+.table-changereq table th{
+    font-family:montserratsemibold;
+    font-size:13px;
+    text-align: left;
+    color:#f26f21;
+    border-bottom: 1px solid #E3E3E3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    border-collapse: collapse;
+   
+}
+
+#changerequest-form-2 {
+    height: 760px;
+    width: 82%;
+    left: 5%;
+    top: 8%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.changereq-input-3{
+    width: 24.3%;
+    height: 100%;
+    display: inline-block;
+    margin-top: 17px;
+    margin-left: 3%;
+}
+
+.btn-changereq-submit-2{
+    margin-top: 16% !important;
+}
+
+.btn-changereq-submit-3{
+    margin-top: 30% !important;    
+}

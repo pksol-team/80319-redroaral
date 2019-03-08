@@ -12,7 +12,7 @@
 	                <tr>
 	                    <th>ID</th>
 	                    <th>Lead Gen User</th>	                    
-	                    <th>View Lead Requests</th>
+	                    <th>View Submitted Leads</th>
 	                </tr>
 	            </thead>
 	        

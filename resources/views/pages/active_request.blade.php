@@ -10,6 +10,7 @@
 			        {{-- <table> --}}
 			            <thead>
 			                <tr>
+			                    <th>Order Id</th>
 			                    <th>Request By</th>
 			                    <th>Date Placed</th>
 			                    <th>Order #</th>
@@ -25,14 +26,15 @@
 			            <tbody>
 			            		@foreach($data as $active_requsts)
 
-			            	<tr>                        	
-			            	    <td>{{ $active_requsts->users->name }}</td>
+			            	<tr>                      
+			            	<td>{{ $active_requsts->order_id }}</td>
+			            	    <td>{{ $active_requsts->name }}</td>
 			            	    <td>{{ $active_requsts->purchased_date }}</td>
-			            	    <td>{{ $active_requsts->order_id }}</td>
-			            	    <td>{{ $active_requsts->products->product_type }}</td>
-			            	    <td>{{ $active_requsts->products->product_name }}</td>
+			            	    <td>{{ $active_requsts->order_no }}</td>
+			            	    <td>{{ $active_requsts->product_type }}</td>
+			            	    <td>{{ $active_requsts->product_name }}</td>
 			            	    <td>{{ $active_requsts->quantity }}</td>
-			            	    <td>{{ $active_requsts->products->price }}</td>
+			            	    <td>&#163; {{ $active_requsts->price }}</td>
 			            	    <td>&#163; {{ $active_requsts->exclude_vat }}</td>
 			            	    
 			            	    	<td style="text-align: center"><a href="/edit_request/{{ $active_requsts->order_id }}">

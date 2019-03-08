@@ -3,11 +3,15 @@
 @section('title', 'Edit Request')
 @section('content')	
 	<div id="dashboard-form" class="usa">
+	    <a href="{{ url()->previous() }}"><i class="fa fa-arrow-left previous_url"></i></a>
 		<div id="changerequest-form" class="usa" style="">
+		    
 	        <div class="frame2-changereq" id="frame2-changereq">
+	            
 	            <div class="changereq-title">
 	                <label>Edit Request</label>
-	            </div>	            
+	            </div>	      
+	            
 				<form id="contact-form" class="form-horizontal" method="POST" action="/update_customer_order">
 	              	{{ csrf_field() }}
 		            <div class="row1-changereq-info">
@@ -21,16 +25,16 @@
 		            	    		$user = "Customer";		
 		            	    	@endphp
 		            	    @endif
-		            	    <label>Requested By <b style="font-size: 15px; color: black">{{ $user }}</b></label>
-		            	    <input type="text" name="" value="{{ $data->users->name }}" disabled="">							
+		            	    <label>Requested By <b style="font-size: 15px; color: black"></b></label>
+		            	    <input type="text" name="name" value="{{ $data->users->name }}" >							
 		            	</div>
 		            	<div class="changereq-input">
 		            	    <label>Date Placed</label>
-		            	    <input type="date" name="purchased_date" value="{{ $data->purchased_date }}" disabled="">							
+		            	    <input type="text" class="datepicker-starttime" name="purchased_date" value="{{ $data->purchased_date }}">							
 		            	</div>
 		                <div class="changereq-input">
 		                    <label>Request Type</label>								
-		                    <select name="product_type" disabled="">
+		                    <select name="product_type">
 		                    	@if ($data->products->product_type == 'Lead')
 			                    	<option value="Lead" selected="">Lead</option>
 			                    	<option value="Sales">Sales</option>
@@ -42,7 +46,7 @@
 		                </div>
 		                <div class="changereq-input">
 		                    <label>Level</label>								
-		                    <select name="product_name" disabled="">
+		                    <select name="product_name">
 		                    	@if ($data->products->product_name == 'Bronze')
 			                    	<option value="Bronze" selected="">Bronze</option>
 			                    	<option value="Silver">Silver</option>
@@ -60,19 +64,19 @@
 		                </div>
 		                <div class="changereq-input">
 		                    <label>Quantity</label>
-		                    <input type="text" name="quantity" value="{{ $data->quantity }}" disabled="">
+		                    <input type="text" name="quantity" value="{{ $data->quantity }}">
 		                </div>	
 		                <div class="changereq-input">
 		                    <label>Cost Per Rquest</label>
-		                    <input type="text" name="item_cost" value="{{ $data->products->price }}" disabled="">
+		                    <input type="text" name="item_cost" value="{{ $data->products->price }}" readOnly="">
 		                </div>
 		                <div class="changereq-input">
 		                    <label>Total(Exclude VAT)</label>
-		                    <input type="text" name="exclude_vat" value="{{ $data->exclude_vat }}" disabled="">
+		                    <input type="text" name="exclude_vat" value="{{ $data->exclude_vat }}" readOnly="">
 		                </div>
 		                <div class="changereq-input">
 		                    <label>Total(Include VAT)</label>
-		                    <input type="text" name="include_vat" value="{{ $data->include_vat }}" disabled="">
+		                    <input type="text" name="include_vat" value="{{ $data->include_vat }}" readOnly="">
 		                </div> 
 		                <div class="changereq-input">
 		                    <label>Status</label>
@@ -98,7 +102,9 @@
 		                    	@endif
 		                    </select>
 		                </div>              
-		                <input type="hidden" name="order_id" value="{{ $data->order_id }}">	                
+		                <input type="hidden" name="order_id" value="{{ $data->order_id }}">	
+		                <input type="hidden" name="user_id" value="{{ $data->users->user_id }}">	
+		                <input type="hidden" name="vat" value="{{ $vat->vat}}">	                
 		                <input type="hidden" name="product_id" value="{{ $data->products->id }}">	                
 		                <button type="submit" class="btn-changereq-submit">Update</button>
 		            </div>
@@ -107,7 +113,7 @@
 		</div>
 	</div>
 
-{{-- 	<script>
+	<script>
 		jQuery(document).ready(function($) {	
 
 			$('select[name="product_type"], select[name="product_name"]').change(function(){
@@ -125,28 +131,40 @@
 				})
 				.done(function(response) {
 					var response_data = jQuery.parseJSON(response);
-					$('input[name="item_cost"]').attr('value', response_data.quantity);
-					$('b.quantity').html(response_data.price);
-					$('input[name="product_id"]').attr('value', response_data.id);
+					console.log(response_data);
+					$('input[name="item_cost"]').attr('value', response_data[0].price);
+					
+					$('input[name="product_id"]').attr('value', response_data[0].id);
+					
+					$('input[name="vat"]').attr('value', response_data[1].vat);
 				});					
 				
 			});
-
-			$("input[name='quantity']").keyup(function() {
+			
+			
+			
+				$("input[name='quantity']").keyup(function() {
+				
 				var quantity = $(this).val();
 
 				var cost = $("input[name='item_cost']").val();
+				
+				var vat = $("input[name='vat']").val();
 
 				var exclude_vat = quantity * cost ;
 
 				$("input[name='exclude_vat']").attr('value', exclude_vat);
 
-				var include_vat = 10 + exclude_vat;
+				var include_vat = parseInt(vat) + parseInt(exclude_vat);
 
 				$("input[name='include_vat']").attr('value', include_vat);
 				
 			});
+			
+			
+			
+		
 		});
-	</script> --}}
+	</script>
 
 @endsection()

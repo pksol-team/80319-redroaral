@@ -4,13 +4,6 @@
 
 @section('content')	
 
-{{-- <div id="ex1" class="modal">
-  	<div class="changereq-input">
-	    <label>Date Placed</label>
-	    <input type="text" name="purchased_date" value="{{ date('Y-m-d') }}" >					
-	</div>
-</div> --}}
-
 	<div id="ip-form" class="usa" style="">
 		
 	        <div class="frame1-ip">
@@ -22,8 +15,9 @@
 	                            <th>Date</th>
 	                            <th>RequestType</th>
 	                            <th>Price Per Lead</th>
-	                            <th>Quantity</th>	                            
-		                        <th>Total(excl VAT)</th>		                        
+	                            <th>Quantity</th>
+	                            <th>Remaining Quantity</th>
+		                        <th>Total(excluding VAT)</th>		                        
 	                            <th>Leads</th>
 	                            <th>Payment Status</th>
 	                            <th>Lead Status</th>
@@ -38,13 +32,9 @@
 		                    	    <td>{{ $requsts->products->product_type }}</td>
 		                    	    <td>{{ $requsts->products->price }}</td>
 		                    	    <td>{{ $requsts->quantity }}</td>
+		                    	    <td>{{ $requsts->remaining_quantity }}</td>
 		                    	    <td>&#163; {{ $requsts->exclude_vat }}</td>
-		                    	    <td>
-		                    	    	{{-- <p><a href="#ex1" rel="modal:open">Open Modal</a></p> --}}
-		                    	    	<a href="/view_request/{{ $requsts->order_id }}"><button type="" class="view_btn">View</button></a>
-	
-
-								</td>
+		                    	    <td><a href="/view_request/{{ $requsts->order_id }}"><button type="" class="view_btn">View</button></a></td>
 		                    	    <td>{{ $requsts->payment_status }}
 		                    	    <td>{{ $requsts->status }}</td>
 		                    	    
@@ -60,16 +50,5 @@
 	        </div>
 	    </div>
 
-
-
-<!-- Link to open the modal -->
-
-
- {{-- <div id="ex1" class="modal">
-  <p>Thanks for clicking. That felt good.</p>
-  <a href="#" rel="modal:close">Close</a>
-</div> --}}
-
-
-
+	 
 @endsection()

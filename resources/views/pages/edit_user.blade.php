@@ -15,22 +15,19 @@
 		            		$user = 'Customer';
 		            	@endphp	            	
 	            	@endif
-	                <label>Edit Lead Generator</label>
+	                <label>Edit {{ $user }}</label>
 	            </div>
-@php
-	@dump($data)
-@endphp
 				{{-- <form id="contact-form" class="form-horizontal" method="POST" action="/add_lead_generator"> --}}
-					<form method="POST" action="">
+					<form method="POST" action="/update_user_info">
 	              	{{ csrf_field() }}
 		            <div class="row1-changereq-info">
 		                <div class="changereq-input">
 		                    <label>First Name</label>		                    
-		                    <input type="text" name="name" value="{{ $data->name }}">
+		                    <input type="text" name="name" value="{{ $data->name }}" required="">
 		                </div>
 		                <div class="changereq-input">
 		                    <label>Last Name</label>
-		                    <input type="text" name="last_name" value="{{ $data->last_name }}">
+		                    <input type="text" name="last_name" value="{{ $data->last_name }}" required="">
 		                </div>		               
 		                <div class="changereq-input">
 		                    <label>Email</label>
@@ -38,16 +35,27 @@
 		                </div>
 		                <div class="changereq-input">
 		                    <label>Password</label>
-		                    <input type="text" name="" value="{{ $data->password }}" readonly="">
+		                    <input type="text" name="" value="*************" readonly="">
 		                </div>
 		                <div class="changereq-input">
 		                    <label>Phone</label>
-		                    <input type="text" name="phone" value="{{ $data->phone }}">
+		                    <input type="text" name="phone" value="{{ $data->phone }}" required="">
 		                </div>
 		                <div class="changereq-input">
 		                    <label>Status</label>
-		                    <input type="text" name="name" value="{{ $data->name }}">
+		                    <select name="status">
+		                        @if($data->status == 'Deactive')
+		                            <option value="Deactive" selected>Deactive</option>
+		                            <option value="Active">Active</option>
+		                        @else
+		                            <option value="Deactive">Deactive</option>
+		                            <option value="Active" selected>Active</option>
+		                        @endif
+		                    </select>
+		                    <!--<input type="text" name="status" value="{{ $data->status }}">-->
 		                </div>
+		                <input type="hidden" name="user_id" value="{{ $data->user_id}}">
+		                <input type="hidden" name="isAdmin" value="{{ $data->isAdmin}}">
 		                <button type="submit" class="btn-changereq-submit">Update {{ $user }}</button>
 		            </div>
 		        </form>
