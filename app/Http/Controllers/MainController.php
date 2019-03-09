@@ -136,7 +136,8 @@ class MainController extends Controller
     }
     public function recurringform_index(){
         if(Auth::user()->isAdmin != 2){
-    	   return view('pages/recurring_form');            
+            $products = DB::table('products')->get();
+    	    return view('pages/recurring_form')->with('data', $products);            
         }else{
             return redirect("/page_404");
         }
@@ -473,9 +474,13 @@ $id = $request->leads_submission.','.Auth::user()->user_id;
        
         if($request->table == 'product_vat'){
             DB::table('product_vat')->where('id', $request->id)->update( [ 'vat' => $request->value]);
-        }else{
-            // DB::table('products')->where('id', $request->id)->update( [ 'product_type' => $request->type, 'product_name' => $request->name, 'price' => $request->cost]);
+        }else{           
+            // Update Cost
             DB::table('products')->where('id', $request->id)->update( [ 'price' => $request->cost]);
+            // Update Name
+            DB::table('products')->where('product_name', $request->old_name)->update( [ 'product_name' => $request->name ]);
+             // Update Type
+            DB::table('products')->where('product_type', $request->old_type)->update( [ 'product_type' => $request->type ]);
 
         }
     }

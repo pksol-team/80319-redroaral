@@ -17,25 +17,25 @@
 		            	    <!--<input type="text" name="purchased_date" value="{{ date('Y-m-d') }}" >							-->
 		            	</div>
 		                <div class="changereq-input">
-		                    <label>Request Type</label>								
+		                    <label>Request Type</label>						
 		                    <select name="product_type">
 		                        <option value="">Select Request Type</option>
-		                        <option value="Lead">Lead</option>
-		                            <!--<option value="{{ $data[0] ->product_type}}">{{ $data[0] ->product_type}}</option>-->
-		                            <!--<option value="{{ $data[0] ->product_type}}">{{ $data[0] ->product_type}}</option>-->
-		                    	 {{-- <option value="Sales">Sales</option> --}}
+		                        {{-- <option value="Lead">Lead</option> --}}
+		                    	{{-- <option value="Sales">Sales</option>--}}
+		                            <option value="{{ $data[0] ->product_type}}">{{ $data[0] ->product_type}}</option>
+		                            {{-- <option value="{{ $data[5] ->product_type}}">{{ $data[5] ->product_type}}</option> --}}
 		                    </select>
 		                </div>
 		                <div class="changereq-input">
 		                    <label>Package</label>								
 		                    <select name="product_name">
                                 <option value="">Select Package</option>
-                                <!--<option value="{{ $data[0] ->product_name}}">{{ $data[0] ->product_name}}</option>-->
-                                <!--<option value="{{ $data[1] ->product_name}}">{{ $data[1] ->product_name}}</option>-->
-                                <!--<option value="{{ $data[2] ->product_name}}">{{ $data[2] ->product_name}}</option>-->
-		                    	 <option value="Bronze">Bronze</option>
+                                <option value="{{ $data[0] ->product_name}}">{{ $data[0] ->product_name}}</option>
+                                <option value="{{ $data[1] ->product_name}}">{{ $data[1] ->product_name}}</option>
+                                <option value="{{ $data[2] ->product_name}}">{{ $data[2] ->product_name}}</option>
+		                    	{{--  <option value="Bronze">Bronze</option>
 		                    	 <option value="Silver">Silver</option>
-		                    	 <option value="Gold">Gold</option>
+		                    	 <option value="Gold">Gold</option> --}}
 		                    </select>
 		                </div>
 		                <div class="changereq-input">

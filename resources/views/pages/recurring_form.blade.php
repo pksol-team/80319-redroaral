@@ -18,16 +18,25 @@
 		                <div class="changereq-input">
 		                    <label>Request Type</label>								
 		                    <select name="product_type">
-		                    	 <option value="Lead">Lead</option>
-		                    	 <option value="Sales">Sales</option>
+		                        <option value="">Select Request Type</option>
+
+		                    	<option value="{{ $data[0] ->product_type}}">{{ $data[0] ->product_type}}</option>
+		                        <option value="{{ $data[5] ->product_type}}">{{ $data[5] ->product_type}}</option>
+		                    	 {{-- <option value="Lead">Lead</option>
+		                    	 <option value="Sales">Sales</option> --}}
 		                    </select>
 		                </div>
 		                <div class="changereq-input">
 		                    <label>Level</label>								
 		                    <select name="product_name">
-		                    	 <option value="Bronze">Bronze</option>
+                                <option value="">Select Level</option>
+
+		                    	<option value="{{ $data[0] ->product_name}}">{{ $data[0] ->product_name}}</option>
+		                    	<option value="{{ $data[1] ->product_name}}">{{ $data[1] ->product_name}}</option>
+		                    	<option value="{{ $data[2] ->product_name}}">{{ $data[2] ->product_name}}</option>
+		                    	{{--  <option value="Bronze">Bronze</option>
 		                    	 <option value="Silver">Silver</option>
-		                    	 <option value="Gold">Gold</option>
+		                    	 <option value="Gold">Gold</option> --}}
 		                    </select>
 		                </div>
 		                <div class="changereq-input">
